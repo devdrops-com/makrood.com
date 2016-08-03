@@ -878,14 +878,28 @@
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+
+
+.footer {
+  text-align: center;
+  background: #fafafa;
+  color: #767777;
+  font-size: 86%;
+  padding: 15px 0;
+  .footer-copyright {}
+}
+
+
+
+
 // タブレット
 @media (max-width: 767px) {
   #entry-list figure {
     width: 40%;
   }
-  #footer-logoarea {
-    text-align: center;
-  }
+  // #footer-logoarea {
+  //   text-align: center;
+  // }
   #footer-navi ul.pull-right {
     float: none !important;
     padding: 0;
@@ -1152,7 +1166,7 @@
 
 #mainvisual {
   background-attachment: fixed;
-  background-image: url(https://makrood-com.movabletype.io/images/bg-top-main.jpg);
+  background-image: url(../images/1280x800.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1172,7 +1186,7 @@
 }
 
 #mainvisual-lower {
-  background: url(https://makrood-com.movabletype.io/images/bg-top-main.jpg) no-repeat center bottom;
+  background: url(../images/1280x800.png) no-repeat center bottom;
   background-size: cover;
   color: #fff;
   padding: 3.5em 0;
@@ -1564,13 +1578,6 @@ body {
   &#sitetop {
     padding-top: 0;
   }
-}
-
-footer {
-  background: #fafafa;
-  color: #767777;
-  font-size: 86%;
-  padding: 15px 0;
 }
 
 h1.page-title {

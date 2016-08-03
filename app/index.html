@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+
   <head>
     <meta charset="UTF-8">
     <title>マックルー</title>
@@ -37,34 +38,33 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
   </head>
 
   <body id="sitetop">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
     <![endif]-->
-
     <header class="navbar">
       <div class="container">
-        <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand">マックルー</a><button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button></h1>
+        <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand">Maklood</a><button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button></h1>
         <nav class="navbar-collapse collapse navbar-right">
           <ul class="header-socialbtn">
-            <li class="facebook"><a href="https://www.facebook.com/movabletypenet"><i class="fa fa-facebook"></i></a></li>
-            <li class="twitter"><a href="https://twitter.com/movabletypenet"><i class="fa fa-twitter"></i></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/113595894611761341366/"><i class="fa fa-google"></i></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/maklood" target="_blank"><span class="fa fa-facebook"></span></a></li>
+            <li class="instagram"><a href="https://www.instagram.com/maklood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-scroll">
             <li class="hidden">
               <a href="#mainvisual"></a>
             </li>
-            <li><a href="#how-to-drink">おいしい飲み方</a></li>
-            <li><a href="#concept">こだわりの国産果汁を使っています</a></li>
-            <li><a href="#products">製品ラインナップ</a></li>
-            <li><a href="#buy">ご購入はこちら</a></li>
-            <li><a href="#access">アクセス</a></li>
-            <li><a href="#about">マックルートとは？</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-            <li><a href="/news.html">ニュース</a></li>
+            <li><a href="#how-to-drink">How to Drink</a></li>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#buy">Buy</a></li>
+            <li><a href="#access">Access</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/news.html">News</a></li>
             <li class="hidden">
               <a href="#top-news"></a>
             </li>
@@ -82,7 +82,7 @@
     </section>
     <section class="webpages" id="how-to-drink">
       <div class="container">
-        <h3>おいしい飲み方</h3>
+        <h3>How to Drink おいしい飲み方</h3>
         <div class="row">
           <div class="col-sm-12">
             <p>おいしい飲み方</p>
@@ -129,14 +129,31 @@
         </div>
       </div>
     </section>
-    <section class="webpages" id="access">
+    <section class="webpages" id="access" onload="initialize();">
+      <h3>アクセス</h3>
+      <div id="map_canvas" style="width:100%;height:500px;"></div>
       <div class="container">
-        <h3>アクセス</h3>
         <div class="row">
-          <div class="col-sm-12">
-            <p>アクセス</p>
-            <p>アクセス</p>
-            <p>アクセス</p>
+          <div class="col-sm-6"> <address>
+              <strong>Makrood</strong>
+              <br>〒899-0013 鹿児島県鹿児島市荒田2-14-13 KICSビル 103
+              <br><abbr title="電話番号"><span class="fa fa-phone-square" aria-hidden="true"></span></abbr>&nbsp;0120-22-8759
+              <br><abbr title="受付時間"><span class="fa fa-clock-o" aria-hidden="true"></span></abbr>&nbsp;8:30～17:15（毎週月曜日は休業）
+            </address>
+            <div><a class="btn btn-default" href="#" role="button">ご予約・お問い合わせ</a></div>
+            <dl class="dl-horizontal"> <dt>Cafe</dt>
+              <dd>11:30−22:00（21:00 L.O.）</dd> <dt>Lunch</dt>
+              <dd>11:30−15:00（21:00 L.O.）</dd>
+            </dl>
+          </div>
+          <div class="col-sm-6">
+            <h4><i class="fa fa-train" aria-hidden="true"></i>&nbsp;鹿児島中央駅からお越しの方</h4>
+             <ul>
+               <li><div>鹿児島中央駅前</div>
+                 <div><span class="fa fa-car" aria-hidden="true"></span> 車 <span class="fa fa-clock-o" aria-hidden="true"></span>約15分</div>
+               </li>
+             </ul>
+            <h4><i class="fa fa-car" aria-hidden="true"></i>&nbsp;鹿児島ＩＣ方面からお越しの方</h4>
           </div>
         </div>
       </div>
@@ -208,13 +225,24 @@
         </div>
       </div>
     </section>
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-6" id="footer-logoarea">
-            <p id="copyright">&copy;Example,Ltd.</p>
-          </div>
-        </div>
+        <div class="footer-logo"><img src="http://placehold.jp/150x150.png" alt=""></div>
+        <ul class="footer-menu list-inline">
+          <li><a href="#how-to-drink">How to Drink</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="#access">Access</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/news.html">News</a></li>
+        </ul>
+        <ul class="footer-sns list-inline">
+          <li class="facebook"><a href="https://www.facebook.com/maklood" target="_blank"><span class="fa fa-facebook"></span></a></li>
+          <li class="instagram"><a href="https://www.instagram.com/maklood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+        </ul>
+        <p class="footer-copyright">&copy;Maklood.</p>
       </div>
     </footer>
     <!-- Google Analytics:change UA-XXXXX-X to be your site's ID. -->
@@ -258,15 +286,6 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
-
-
-
-
-
-
-
-
   </body>
 
 </html>
