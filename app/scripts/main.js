@@ -25,47 +25,45 @@
       $('#return-pagetop').fadeOut('slow');
     }
   });
-
-
-
-function initialize() {
-  var latlng = new google.maps.LatLng(31.571655, 130.551444);
-  var myOptions = {
-    zoom: 18,/*拡大比率*/
-    center: latlng,/*表示枠内の中心点*/
-    mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] }/*表示タイプの指定*/
-  };
-  var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-  /*アイコン設定▼*/
-  var icon = new google.maps.MarkerImage('../images/map-icon.png',
-    new google.maps.Size(55,72),/*アイコンサイズ設定*/
-    new google.maps.Point(0,0)/*アイコン位置設定*/
-    );
-  var markerOptions = {
-    position: latlng,
-    map: map,
-    icon: icon,
-    title: '株式会社Lig'
-  };
-  var marker = new google.maps.Marker(markerOptions);
-  /*アイコン設定ここまで▲*/
-
-  /*取得スタイルの貼り付け*/
-  var styleOptions = [
-  {
-    ' stylers' : [
-    { ' saturation' : -100 },
-    { ' visibility' : ' simplified'  },
-    { ' lightness' : 22 }
-    ]
+  $('#mainvisual-eyecatch-slider').slick({fade: true, arrows: false});
+  $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
+  function initialize() {
+    var latlng = new google.maps.LatLng(31.571655, 130.551444);
+    var myOptions = {
+      zoom: 18,
+      center: latlng,
+      mapTypeControlOptions: {
+        mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP]
+      }
+    };
+    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+    var icon = new google.maps.MarkerImage('../images/map-icon.png', new google.maps.Size(55, 72), new google.maps.Point(0, 0));
+    var markerOptions = {
+      position: latlng,
+      map: map,
+      icon: icon,
+      title: '株式会社Lig'
+    };
+    var marker = new google.maps.Marker(markerOptions);
+    var styleOptions = [
+      {
+        ' stylers': [
+          {
+            ' saturation': -100
+          }, {
+            ' visibility': ' simplified'
+          }, {
+            ' lightness': 22
+          }
+        ]
+      }
+    ];
+    var styledMapOptions = {
+      name: 'マックルー'
+    }
+    var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+    map.mapTypes.set('sample', sampleType);
+    map.setMapTypeId('sample');
   }
-  ];
-  var styledMapOptions = { name: '株式会社Lig' }
-  var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
-  map.mapTypes.set('sample', sampleType);
-  map.setMapTypeId('sample');
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
+  google.maps.event.addDomListener(window, 'load', initialize);
 })();

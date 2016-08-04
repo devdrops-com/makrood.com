@@ -30,6 +30,7 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
@@ -41,17 +42,17 @@
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
   </head>
 
-  <body id="sitetop">
+  <body class="sitetop">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
     <![endif]-->
     <header class="navbar">
       <div class="container">
-        <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand">Maklood</a><button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button></h1>
+        <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand">Makrood</a><button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button></h1>
         <nav class="navbar-collapse collapse navbar-right">
           <ul class="header-socialbtn">
-            <li class="facebook"><a href="https://www.facebook.com/maklood" target="_blank"><span class="fa fa-facebook"></span></a></li>
-            <li class="instagram"><a href="https://www.instagram.com/maklood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/makrood" target="_blank"><span class="fa fa-facebook"></span></a></li>
+            <li class="instagram"><a href="https://www.instagram.com/makrood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-scroll">
             <li class="hidden">
@@ -73,16 +74,24 @@
       </div>
     </header>
     <section id="mainvisual" class="top">
-      <div class="container">
+      <div class="mainvisual-eyecatch">
+        <div class="mainvisual-eyecatch-symbol"><img src="http://placehold.jp/200x200.png" alt=""></div>
+        <div id="mainvisual-eyecatch-slider">
+          <div class="mainvisual-eyecatch-slider-image"></div>
+          <div class="mainvisual-eyecatch-slider-image"></div>
+          <div class="mainvisual-eyecatch-slider-image"></div>
+        </div>
+      </div>
+      <!-- <div class="container">
         <h2><img src="https://makrood-com.movabletype.io/images/main-img.png" alt="ロゴ画像"></h2>
         <p id="main-text">MovableType.netデザインテーマ「One Page」のデモサイトです！
           <br />「One Page」は1ページ完結＋ニュース更新が可能なレスポンシブウェブデザインを採用したテーマです。
           <br />各ページのメイン画像もカスタムフィールドで簡単に設定することができます。</p>
-      </div>
+      </div> -->
     </section>
     <section class="webpages" id="how-to-drink">
       <div class="container">
-        <h3>How to Drink おいしい飲み方</h3>
+        <h2>How to Drink おいしい飲み方</h2>
         <div class="row">
           <div class="col-sm-12">
             <p>おいしい飲み方</p>
@@ -94,7 +103,7 @@
     </section>
     <section class="webpages pageeven" id="concept">
       <div class="container">
-        <h3>こだわりの国産果汁を使っています</h3>
+        <h2>こだわりの国産果汁を使っています</h2>
         <div class="row">
           <div class="col-sm-12">
             <p>こだわりの国産果汁を使っています</p>
@@ -107,7 +116,7 @@
     </section>
     <section class="webpages" id="products">
       <div class="container">
-        <h3>製品ラインナップ</h3>
+        <h2>製品ラインナップ</h2>
         <div class="row">
           <div class="col-sm-12">
             <p>製品ラインナップ</p>
@@ -119,7 +128,7 @@
     </section>
     <section class="webpages pageeven" id="buy">
       <div class="container">
-        <h3>ご購入はこちら</h3>
+        <h2>ご購入はこちら</h2>
         <div class="row">
           <div class="col-sm-12">
             <p>ご購入はこちら</p>
@@ -130,7 +139,7 @@
       </div>
     </section>
     <section class="webpages" id="access" onload="initialize();">
-      <h3>アクセス</h3>
+      <h2><span>Access</span>アクセス</h2>
       <div id="map_canvas" style="width:100%;height:500px;"></div>
       <div class="container">
         <div class="row">
@@ -147,50 +156,26 @@
             </dl>
           </div>
           <div class="col-sm-6">
-            <h4><i class="fa fa-train" aria-hidden="true"></i>&nbsp;鹿児島中央駅からお越しの方</h4>
-             <ul>
-               <li><div>鹿児島中央駅前</div>
-                 <div><span class="fa fa-car" aria-hidden="true"></span> 車 <span class="fa fa-clock-o" aria-hidden="true"></span>約15分</div>
-               </li>
-             </ul>
-            <h4><i class="fa fa-car" aria-hidden="true"></i>&nbsp;鹿児島ＩＣ方面からお越しの方</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="webpages pageeven" id="about">
-      <div class="container">
-        <h3>マックルートとは？</h3>
-        <div class="row">
-          <div class="col-sm-12">
-            <p>マックルートとは？</p>
-            <p>マックルートとは？</p>
-            <p>マックルートとは？</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="webpages" id="contact">
-      <div class="container">
-        <h3>お問い合わせ</h3>
-        <div class="row">
-          <div class="col-sm-12">
-            <p>
-              <iframe src="https://form.movabletype.net/7BD78188-5934-11E6-9804-F1CBB6B2ADFA?embed=true" width="100%" height="500" frameborder="0"></iframe>
-            </p>
-          </div>
+            <h3><i class="fa fa-train" aria-hidden="true"></i>&nbsp;鹿児島中央駅からお越しの方</h3>
+            <ul>
+              <li>
+                <div>鹿児島中央駅前</div>
+                <div><span class="fa fa-car" aria-hidden="true"></span> 車 <span class="fa fa-clock-o" aria-hidden="true"></span>約15分</div>
+              </li>
+            </ul>
+            <h3><i class="fa fa-car" aria-hidden="true"></i>&nbsp;鹿児島ＩＣ方面からお越しの方</h3> </div>
         </div>
       </div>
     </section>
     <section id="top-news">
       <div class="container">
-        <h3>ニュース</h3>
+        <h2>ニュース</h2>
         <div class="row">
           <div class="col-sm-3">
             <a href="https://makrood-com.movabletype.io/2016/08/post-12.html">
               <figure class="noimage"><span>No image</span></figure>
               <div class="entry-detail">
-                <h1>ダミータイトル</h1>
+                <h3>ダミータイトル</h3>
                 <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
               </div>
             </a>
@@ -199,7 +184,7 @@
             <a href="https://makrood-com.movabletype.io/2016/08/post-3.html">
               <figure class="noimage"><span>No image</span></figure>
               <div class="entry-detail">
-                <h1>ダミータイトル</h1>
+                <h3>ダミータイトル</h3>
                 <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
               </div>
             </a>
@@ -208,7 +193,7 @@
             <a href="https://makrood-com.movabletype.io/2016/08/post-2.html">
               <figure class="noimage"><span>No image</span></figure>
               <div class="entry-detail">
-                <h1>ダミータイトル</h1>
+                <h3>ダミータイトル</h3>
                 <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
               </div>
             </a>
@@ -238,11 +223,11 @@
           <li><a href="#contact">Contact</a></li>
           <li><a href="/news.html">News</a></li>
         </ul>
-        <ul class="footer-sns list-inline">
-          <li class="facebook"><a href="https://www.facebook.com/maklood" target="_blank"><span class="fa fa-facebook"></span></a></li>
-          <li class="instagram"><a href="https://www.instagram.com/maklood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+        <ul class="footer-links list-inline">
+          <li class="facebook"><a href="https://www.facebook.com/makrood" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
+          <li class="instagram"><a href="https://www.instagram.com/makrood" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
         </ul>
-        <p class="footer-copyright">&copy;Maklood.</p>
+        <p class="footer-copyright">&copy;Makrood.</p>
       </div>
     </footer>
     <!-- Google Analytics:change UA-XXXXX-X to be your site's ID. -->
@@ -267,6 +252,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
     <script src="/bower_components/jquery.tile.js/jquery.tile.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/plugins.js -->
