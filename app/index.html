@@ -46,18 +46,23 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
     <![endif]-->
-    <header class="navbar">
+    <header class="navbar navbar-default  navbar-fixed-top">
       <div class="container">
-        <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand">Makrood</a><button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button></h1>
-        <nav class="navbar-collapse collapse navbar-right">
-          <ul class="header-socialbtn">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navigation" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1 class="navbar-brand"><a href="#"><img src="./images/header-logo.png" alt=""></a></h1>
+        </div>
+        <nav class="collapse navbar-collapse" id="global-navigation">
+          <ul class="nav navbar-nav navbar-right">
             <li class="facebook"><a href="https://www.facebook.com/makrood" target="_blank"><span class="fa fa-facebook"></span></a></li>
             <li class="instagram"><a href="https://www.instagram.com/makrood" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-scroll">
-            <li class="hidden">
-              <a href="#mainvisual"></a>
-            </li>
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="#how-to-drink">How to Drink</a></li>
             <li><a href="#concept">Concept</a></li>
             <li><a href="#products">Products</a></li>
@@ -66,18 +71,14 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="/news.html">News</a></li>
-            <li class="hidden">
-              <a href="#top-news"></a>
-            </li>
           </ul>
         </nav>
       </div>
     </header>
-    <section id="mainvisual" class="top">
+    <section class="mainvisual top">
       <div class="mainvisual-eyecatch">
         <div class="mainvisual-eyecatch-symbol"><img src="./images/mainvisual-eyecatch-symbol.png" alt="Cafe and Farmer's shop Makrood"></div>
         <div id="mainvisual-eyecatch-slider">
-          <div class="mainvisual-eyecatch-slider-image"></div>
           <div class="mainvisual-eyecatch-slider-image"></div>
           <div class="mainvisual-eyecatch-slider-image"></div>
         </div>
@@ -94,10 +95,34 @@
         <h2 class="webpages-title">美味しいハーブティーの飲みかた。</h2>
         <p class="webpages-subtitle">How to Drink</p>
         <div class="row">
-          <div class="col-sm-12">
-            <p>おいしい飲み方</p>
-            <p>おいしい飲み方</p>
-            <p>おいしい飲み方</p>
+          <div class="col-xs-4">
+            <div><img src="./images/how-to-drink-hot-01.png" alt=""></div>
+            <div>
+              <p> 沸騰させたお湯、または電気ポットのお湯をテイーポット又はテイーカップに入れ容器を温める。 </p>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div><img src="./images/how-to-drink-hot-02.png" alt=""></div>
+            <div>
+              <p> 温めた容器にテイーバックを入れ、250－300ｃｃのお湯（90℃-95℃）を注ぎ3-5分間待ちお好みの濃さでテイーバックを取り出してお飲みください。 </p>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div><img src="./images/how-to-drink-hot-03.png" alt=""></div>
+            <div>
+              <p> 1つのテイーバックで2-3杯お楽しみ頂けます。 </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3"><img src="./images/how-to-drink-ice.png" alt=""></div>
+          <div class="col-xs-9">
+            <ul>
+              <li>冷やしてお飲みの場合は湯量を少なめにして濃く出して氷を入れてお飲みください。</li>
+              <li>マイボトルにテイーバックを入れてホットテイー、アイステイーとしてもお楽しみ頂けます。</li>
+              <li>水出しハーブティーとしてフィルター・イン・ボトル等にティーバッグを入れ冷水を300〜500cc加えて軽くボトルを振り冷蔵庫で3〜4時間冷やすと爽やかな味と香りのハーブティーが楽しめます。</li>
+              <li>また、焼酎のハーブテイー割りもまろやかな口当たりとハーブテイーの香りで美味しく頂けます。ホット又は氷を入れたハーブテイーに焼酎を4対6、5対5等好みの濃さでお試し下さい。</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -213,7 +238,7 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="footer-logo"><img src="http://placehold.jp/150x150.png" alt=""></div>
+        <div class="footer-logo"><img src="./images/footer-logo.png" alt=""></div>
         <ul class="footer-menu list-inline">
           <li><a href="#how-to-drink">How to Drink</a></li>
           <li><a href="#concept">Concept</a></li>
