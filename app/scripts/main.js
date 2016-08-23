@@ -1,7 +1,14 @@
 (function() {
   'use strict';
+  var $window = $('window');
+  var $body = $('body');
+  var $header = $('header');
   // スクロールスパイ
   $('body').scrollspy({target: '#global-navigation', offset: 100});
+  // スムーススクロール
+  $('#global-navigation .navbar-main a').smoothScroll();
+  // メインビジュアル スライダー min-height設定
+  $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
   // メインビジュアル スライダー
   $('#mainvisual-eyecatch-slider').slick({
     autoplay: true,
@@ -11,31 +18,30 @@
     pauseOnHover: false,
     speed: 3000
   });
-  // メインビジュアル スライダー min-height設定
-  $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
-  // var $body = ;
-  // // スムーススクロール
-  // $('.navbar-scroll a').smoothScroll({
-  //   beforeScroll: function() {
-  //     $body.addClass('smooth-scroll-scrolling');
-  //     $('.navbar-collapse.collapse.in').collapse('hide');
-  //   },
-  //   afterScroll: function() {
-  //     $body.removeClass('smooth-scroll-scrolling');
-  //   }
+  $(window).scroll(function() {
+    // グローバルナビゲーションの高さに動きを付ける
+    if ($(window).scrollTop() > 80) {
+      $header.addClass('sticky');
+    } else {
+      $header.removeClass('sticky');
+    }
+  });
+  // $window.scroll(function() {
+  //   // このページの先頭に戻る
+  //   if ($(window).scrollTop() > 100) {
+  //
+  //
+  //   // // このページの先頭に戻る
+  //   // if ($(window).scrollTop() > 100) {
+  //   //   $('#return-pagetop').fadeIn('slow');
+  //   // } else {
+  //   //   $('#return-pagetop').fadeOut('slow');
+  //   // }
   // });
   // // ニュースのサムネイルの高さを揃える
   // if ($(window).width() >= 768) {
   //   $('#top-news [class^='col-'] > a').tile(4);
   // }
-  // // このページの先頭に戻る
-  // $(window).scroll(function() {
-  //   if ($(window).scrollTop() > 100) {
-  //     $('#return-pagetop').fadeIn('slow');
-  //   } else {
-  //     $('#return-pagetop').fadeOut('slow');
-  //   }
-  // });
   function initialize() {
     var latlng = new google.maps.LatLng(31.571655, 130.551444);
     var myOptions = {
