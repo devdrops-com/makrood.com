@@ -404,9 +404,9 @@ $navbar-default-link-active-bg: $palet-4;
 // $navbar-default-brand-hover-bg:            transparent !default;
 //
 // // Navbar toggle
-$navbar-default-toggle-hover-bg:           $palet-3;
-$navbar-default-toggle-icon-bar-bg:        $palet-5;
-$navbar-default-toggle-border-color:       $palet-5;
+$navbar-default-toggle-hover-bg: $palet-3;
+$navbar-default-toggle-icon-bar-bg: $palet-5;
+$navbar-default-toggle-border-color: $palet-5;
 //
 //
 // //=== Inverted navbar
@@ -925,6 +925,7 @@ img {
   @include transition(background-color 0.3s ease-in-out);
   &.sticky {
     background-color: rgba($white, 1);
+
     @include box-shadow(0 0px 3px 0 rgba(0,0,0,0.5));
     @media(min-width: $screen-sm-min) {
       .navbar-brand {
@@ -949,13 +950,15 @@ img {
       }
     }
     @media(min-width: $screen-sm-min) {
-      height: auto;
       padding: 10px 0;
+      height: auto;
       font-size: 0;
       line-height: 0;
+
       @include transition(padding 0.3s ease-in-out);
       img {
         height: 70px;
+
         @include transition(height 0.3s ease-in-out);
       }
     }
@@ -967,14 +970,15 @@ img {
     }
     @media (max-width: $screen-xs-max) {
       > li.navbar-social-links {
-        border-top: 1px solid $gray-lighter;
         padding-top: 10px;
         padding-bottom: 10px;
+        border-top: 1px solid $gray-lighter;
         text-align: center;
       }
     }
     @media(min-width: $screen-sm-min) {
       margin-top: 35px;
+
       @include transition(margin-top 0.3s ease-in-out);
       > li {
         &.navbar-social-links {
@@ -1070,9 +1074,9 @@ img {
       text-align: center;
       @media (max-width: $screen-xs-max) {
         display: table-cell;
-        vertical-align: top;
         padding-right: 10px;
         width: 80px;
+        vertical-align: top;
       }
       @media(min-width: $screen-sm-min) {
         padding-bottom: 20px;
@@ -1082,8 +1086,8 @@ img {
       line-height: 1.75;
       @media (max-width: $screen-xs-max) {
         display: table-cell;
-        vertical-align: top;
         padding-bottom: 2em;
+        vertical-align: top;
       }
       @media(min-width: $screen-sm-min) {
         padding: 2em;
