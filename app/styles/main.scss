@@ -1108,10 +1108,32 @@ img {
 }
 
 #products {
+
+  @media (max-width: $screen-xs-max) {
+    .row {
+        margin-right: -5px;
+        margin-left: -5px;
+        [class^='col-'] {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+    }
+  }
+
   .products-info {
     margin-top: 50px;
     .products-info-image {
+      margin-top:  20px;
       text-align: center;
+    }
+    .products-info-title {
+      margin: 0;
+    }
+    .products-info-catchcopy {
+      margin-top: 20px;
+    }
+    .products-info-detail {
+      margin-top: 30px;
     }
   }
   .products-gokonyu {
@@ -1124,11 +1146,21 @@ img {
     .products-gokonyu-catchcopy01 {
       margin-bottom: 0;
       text-align: left;
-      font-size: 30px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 20px;
+      }
+      @media(min-width: $screen-sm-min) {
+        font-size: 30px;
+      }
     }
     .products-gokonyu-catchcopy02 {
       text-align: left;
-      font-size: 35px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 22px;
+      }
+      @media(min-width: $screen-sm-min) {
+        font-size: 35px;
+      }
     }
     .products-gokonyu-products {
       margin-top: 20px;
