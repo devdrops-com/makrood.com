@@ -927,7 +927,7 @@ img {
     background-color: rgba($white, 1);
 
     @include box-shadow(0 0px 3px 0 rgba(0,0,0,0.5));
-    @media(min-width: $screen-sm-min) {
+    @media(min-width: $screen-md-min) {
       .navbar-brand {
         padding: 2px 0;
         img {
@@ -943,13 +943,13 @@ img {
   .navbar-brand {
     margin-top: 0;
     margin-bottom: 0;
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       padding: 2px 0;
       img {
         height: 56px;
       }
     }
-    @media(min-width: $screen-sm-min) {
+    @media(min-width: $screen-md-min) {
       padding: 10px 0;
       height: auto;
       font-size: 0;
@@ -968,7 +968,7 @@ img {
     > li.navbar-social-links > ul > li > a {
       color: $palet-5;
     }
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       > li.navbar-social-links {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -976,7 +976,7 @@ img {
         text-align: center;
       }
     }
-    @media(min-width: $screen-sm-min) {
+    @media(min-width: $screen-md-min) {
       margin-top: 35px;
 
       @include transition(margin-top 0.3s ease-in-out);
@@ -1186,14 +1186,18 @@ img {
       line-height: 2;
     }
   }
-  .dl-horizontal {
-    dt {
-      margin-bottom: 0.8em;
-      width: 3em;
-      text-align: left;
-    }
-    dd {
-      margin-left: 4em;
+
+  @media(min-width: $screen-md-min) {
+    .dl-horizontal {
+      dt {
+      line-height: 2;
+        width: 3em;
+        text-align: left;
+      }
+      dd {
+      line-height: 2;
+        margin-left: 4em;
+      }
     }
   }
 }
@@ -1281,12 +1285,12 @@ img {
         display: inline-block;
         padding: 10px;
         border-radius: 50%;
-        background-color: $palet-4;
+        background-color: $white;
         line-height: 1;
 
         .fa {
           width: 1em;
-          color: $palet-1;
+          color: $palet-5;
           font-size: 25px;
         }
       }

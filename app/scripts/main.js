@@ -6,7 +6,11 @@
   // スクロールスパイ
   $('body').scrollspy({target: '#global-navigation', offset: 100});
   // スムーススクロール
-  $('#global-navigation .navbar-main a').smoothScroll();
+  $('#global-navigation .nav.navbar-nav a').smoothScroll({
+    beforeScroll: function() {
+      $('.navbar-collapse.collapse.in').collapse('hide');
+    }
+  });
   // メインビジュアル スライダー min-height設定
   $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
   // メインビジュアル スライダー
