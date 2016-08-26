@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" href="<mt:BlogURL encode_html="1">images/favicon.ico">
+<link rel="apple-touch-icon" href="<mt:WebsiteURL>images/apple-touch-icon.png">
 <link rel="start" href="<mt:BlogURL encode_html="1">">
 <mt:CanonicalLink>
 <!-- Open Graph Protocol -->
@@ -31,57 +32,50 @@
 <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
 
 <body id="sitetop">
-<script>
-(function() {
-  var id = location.hash.replace('#', '');
-  if (id) {
-    var div = document.createElement('div'),
-      a = document.createElement('a');
-    a.setAttribute('name', id);
-    div.appendChild(a);
-    document.write(div.innerHTML);
-  }
-})();
-</script>
+
+  <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
+  <![endif]-->
 
 <mt:Include module="header">
 
-<section id="mainvisual" class="top">
-  <div class="container">
-  <h2><img src="<mt:BlogURL encode_html="1">images/main-img.png" alt="ロゴ画像"></h2>
-  <p id="main-text">MovableType.netデザインテーマ「One Page」のデモサイトです！<br />「One Page」は1ページ完結＋ニュース更新が可能なレスポンシブウェブデザインを採用したテーマです。<br />各ページのメイン画像もカスタムフィールドで簡単に設定することができます。</p>
+<div class="mainvisual top">
+  <div class="mainvisual-eyecatch">
+    <div class="mainvisual-eyecatch-symbol"><img src="./images/mainvisual-eyecatch-symbol.png" alt="Herbal Shop Makrood"></div>
+    <div id="mainvisual-eyecatch-slider">
+      <div class="mainvisual-eyecatch-slider-image" style="background-image: url('../images/toppage-eyecatch-1.jpg')"></div>
+      <div class="mainvisual-eyecatch-slider-image" style="background-image: url('../images/toppage-eyecatch-2.jpg')"></div>
+    </div>
   </div>
-</section>
+</div>
 
 <mt:Pages sort_order="ascend">
 <mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
-<section class="webpages<mt:If name="__even__"> pageeven</mt:If>" id="<mt:PageBasename>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
-          <mt:If name="iposition" eq="上に配置">
-          <mt:If tag="CustomFieldValue" identifier="pageimage">
-          <div class="pageimage top" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
-          </mt:If>
-          </mt:If>
+<section  id="<mt:PageBasename>" class="webpages<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
+  <mt:If name="iposition" eq="上に配置">
+    <mt:If tag="CustomFieldValue" identifier="pageimage">
+      <div class="pageimage top" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
+    </mt:If>
+  </mt:If>
   <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
-    <h3><mt:PageTitle encode_html="1"></h3>
-    <div class="row">
-      <div class="col-sm-12">
-      <mt:PageBody>
-      <mt:PageMore>
-      </div>
-    </div>
+    <h2 class="webpages-title"><mt:PageTitle encode_html="1"></h2>
+    <p class="webpages-subtitle"><mt:PageBasename separator=" "></p>
+    <mt:PageBody>
+    <mt:PageMore>
   </div>
-          <mt:If name="iposition" eq="下に配置">
-          <mt:If tag="CustomFieldValue" identifier="pageimage">
-          <div class="pageimage bottom" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
-          </mt:If>
-          </mt:If>
+  <mt:If name="iposition" eq="下に配置">
+    <mt:If tag="CustomFieldValue" identifier="pageimage">
+      <div class="pageimage bottom" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
+    </mt:If>
+  </mt:If>
 </section>
 </mt:Pages>
 
 <mt:If name="entrycount" gt="0">
-<section id="top-news">
+<section id="top-news" class="webpages">
   <div class="container">
-    <h3>ニュース</h3>
+    <h2 class="webpages-title">お知らせ</h2>
+    <p class="webpages-subtitle">News</p>
     <div class="row">
     <mt:Entries lastn="4">
       <a href="<mt:EntryPermalink>" class="col-sm-3">
@@ -108,23 +102,6 @@
 <mt:Include module="footer">
 
 <mt:Include module="common_bottom_js">
-<script src="<mt:BlogRelativeURL>js/jquery.tile.min.js"></script>
-<script>
-$(window).load(function(){
-  $('#top-news .col-sm-3').tile(4);
-});
-$(function() {
-  var $body = $('body');
-  $('.navbar-scroll a').smoothScroll({
-    beforeScroll: function() {
-      $body.addClass('smooth-scroll-scrolling');
-      $(".navbar-collapse.collapse.in").collapse('hide');
-    },
-    afterScroll: function() {
-      $body.removeClass('smooth-scroll-scrolling');
-    },
-  });
-});
-</script>
+
 </body>
 </html>
