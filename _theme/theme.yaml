@@ -9,8 +9,10 @@ elements:
   blog_static_files:
     component: '~'
     data:
+      - fonts
       - images
-      - js
+      - scripts
+      - styles
     importer: blog_static_files
   custom_fields:
     component: commercial
@@ -133,4 +135,3 @@ elements:
             filename: 404_error.mtml
             label: 404 エラー
     importer: template_set
-

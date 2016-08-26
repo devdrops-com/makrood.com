@@ -63,6 +63,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false, minifyFontValues: {removeQuotes: false}, discardUnused: {fontFace: false}})))
     .pipe($.if('*.html', $.htmlmin()))
+    .pipe(gulp.dest('_theme/blog_static'))
     .pipe(gulp.dest('dist'));
 });
 
@@ -75,6 +76,7 @@ gulp.task('images', () => {
       // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
     })))
+    .pipe(gulp.dest('_theme/blog_static/images'))
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -82,6 +84,7 @@ gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
+    .pipe(gulp.dest('_theme/blog_static/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
 
@@ -94,7 +97,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', '_theme/blog_static', 'dist']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
