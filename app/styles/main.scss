@@ -1260,6 +1260,14 @@ img {
 
 }
 
+#goto-pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  display: none;
+  z-index: 500;
+}
+
 .footer {
   padding: 80px 0;
   background: $palet-5;

@@ -1,6 +1,5 @@
 (function() {
   'use strict';
-  var $window = $('window');
   var $body = $('body');
   var $header = $('header');
   // スクロールスパイ
@@ -11,6 +10,7 @@
       $('.navbar-collapse.collapse.in').collapse('hide');
     }
   });
+  $('#goto-pagetop a').smoothScroll();
   // メインビジュアル スライダー min-height設定
   $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
   // メインビジュアル スライダー
@@ -29,31 +29,27 @@
     } else {
       $header.removeClass('sticky');
     }
+    // このページの先頭に戻る
+    if ($(window).scrollTop() > 100) {
+      $('#goto-pagetop').fadeIn('slow');
+    } else {
+      $('#goto-pagetop').fadeOut('slow');
+    }
   });
-  // $window.scroll(function() {
-  //   // このページの先頭に戻る
-  //   if ($(window).scrollTop() > 100) {
-  //
-  //
-  //   // // このページの先頭に戻る
-  //   // if ($(window).scrollTop() > 100) {
-  //   //   $('#return-pagetop').fadeIn('slow');
-  //   // } else {
-  //   //   $('#return-pagetop').fadeOut('slow');
-  //   // }
-  // });
-  // // ニュースのサムネイルの高さを揃える
-  // if ($(window).width() >= 768) {
-  //   $('#top-news [class^='col-'] > a').tile(4);
-  // }
+  // ニュースのサムネイルの高さを揃える
+  if ($(window).width() >= 768) {
+    $('#top-news [class^="col-"] > a').tile(4);
+  }
+  // Google Map
   function initialize() {
     var latlng = new google.maps.LatLng(31.571655, 130.551444);
     var myOptions = {
       zoom: 18,
       center: latlng,
       scrollwheel: false,
+      draggable: false,
       mapTypeControlOptions: {
-        mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP]
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'MY_GOOGLEMAP']
       }
     };
     var map = new google.maps.Map(document.getElementById('access-map'), myOptions);
@@ -81,8 +77,8 @@
       name: 'Herbal Shop Makrood'
     }
     var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
-    map.mapTypes.set('sample', sampleType);
-    map.setMapTypeId('sample');
+    map.mapTypes.set('MY_GOOGLEMAP', sampleType);
+    map.setMapTypeId('MY_GOOGLEMAP');
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 })();
