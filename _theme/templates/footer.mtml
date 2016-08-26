@@ -5,14 +5,15 @@
   <div class="container">
     <div class="footer-logo"><img src="<mt:WebsiteURL>images/footer-logo.png" alt=""></div>
     <ul class="footer-menu list-inline">
-      <li><a href="<mt:WebsiteURL>#how-to-drink">How to Drink</a></li>
-      <li><a href="<mt:WebsiteURL>#concept">Concept</a></li>
-      <li><a href="<mt:WebsiteURL>#products">Products</a></li>
-      <li><a href="<mt:WebsiteURL>#shop">Shop</a></li>
-      <li><a href="<mt:WebsiteURL>#access">Access</a></li>
-      <li><a href="<mt:WebsiteURL>#about">About</a></li>
-      <li><a href="<mt:WebsiteURL>#contact">Contact</a></li>
-      <li><a href="<mt:WebsiteURL>news.html">Blog</a></li>
+      <mt:Pages sort_order="ascend" no_folder="1">
+        <li><a href="#<mt:PageBasename>"><mt:PageBasename separator=" "></a></li>
+      </mt:Pages>
+      <li><a href="<mt:WebsiteURL>about/index.html">About</a></li>
+        <li><a href="<mt:WebsiteURL>about/index.html">About</a></li>
+        <li><a href="<mt:WebsiteURL>contact/index.html">Contact</a></li>
+        <mt:If name="entrycount" gt="0">
+          <li><a href="<mt:BlogRelativeURL>news.html">Blog</a></li>
+        </mt:If>
     </ul>
     <ul class="footer-links list-inline">
       <li class="facebook"><a href="https://www.facebook.com/makrood" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
