@@ -102,6 +102,15 @@ elements:
                 archive_type: Individual
                 file_template: "%y/%m/%-f"
                 preferred: 1
+        page:
+          page:
+            filename: page.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
         module:
           blog-sidemenu:
             filename: blog-sidemenu.mtml
