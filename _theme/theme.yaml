@@ -1,9 +1,9 @@
-id: "initialize"
-label: "initialize"
+id: "makrood"
+label: "Makrood"
 version: "1.0.0"
-author_link: "https://makrood-com.movabletype.io/"
-author_name: "マックルー"
-description: "initialize"
+author_link: "http://www.makrood.com/"
+author_name: "Nawagate"
+description: "Herbal Shop Makrood"
 class: "blog"
 elements:
   blog_static_files:
@@ -17,23 +17,15 @@ elements:
   custom_fields:
     component: commercial
     data:
-      bg_top_main:
-        default: 0
-        description: ''
-        name: メイン背景イメージに設定
-        obj_type: asset
-        options: ''
-        required: 0
-        type: checkbox
-      imageposition:
+      blog_keyword:
         default: ''
         description: ''
-        name: メインイメージの配置
-        obj_type: page
-        options: 上に配置,下に配置,背景全体に配置
+        name: キーワード
+        obj_type: blog
+        options: ''
         required: 0
-        type: radio
-      main_image_entry:
+        type: text
+      entry_main_image:
         default: ''
         description: 記事のサムネイルやog:imageとして表示させる画像です。
         name: メインイメージ
@@ -41,7 +33,23 @@ elements:
         options: ''
         required: 0
         type: asset_image
-      pageimage:
+      image_position:
+        default: ''
+        description: ''
+        name: メインイメージの配置
+        obj_type: page
+        options: 上に配置,下に配置,背景全体に配置
+        required: 0
+        type: radio
+      page_english_title:
+        default: ''
+        description: ''
+        name: 英語のタイトル
+        obj_type: page
+        options: ''
+        required: 0
+        type: text
+      page_main_image:
         default: ''
         description: トップページの各ブロックに表示する画像です。（横幅は1280px程度を推奨）
         name: メインイメージ
@@ -49,6 +57,14 @@ elements:
         options: ''
         required: 0
         type: asset_image
+      toppage_eyecatch:
+        default: 0
+        description: ''
+        name: トップページのアイキャッチに設定
+        obj_type: asset
+        options: ''
+        required: 0
+        type: checkbox
     importer: custom_fields
   template_set:
     component: core
@@ -102,15 +118,6 @@ elements:
                 archive_type: Individual
                 file_template: "%y/%m/%-f"
                 preferred: 1
-        page:
-          page:
-            filename: page.mtml
-            label: ウェブページ
-            mappings:
-              page:
-                archive_type: Page
-                file_template: "%-c/%-f"
-                preferred: 1
         module:
           blog-sidemenu:
             filename: blog-sidemenu.mtml
@@ -139,6 +146,15 @@ elements:
           header_news:
             filename: header_news.mtml
             label: header_news
+        page:
+          page:
+            filename: page.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
         system:
           404_error:
             filename: 404_error.mtml
