@@ -143,7 +143,7 @@ footer {
 #mainvisual-lower {
     position: relative;
     padding: 3.5em 0;
-    background: url(<mt:Assets field:bg_top_main="1" lastn="1"><mt:AssetURL><mt:Else><mt:BlogURL encode_html="1">images/bg-top-main.jpg</mt:Assets>) no-repeat center bottom;
+    background: url(<mt:Assets field:toppage_eyecatch="1" lastn="1"><mt:AssetURL><mt:Else><mt:BlogURL encode_html="1">images/bg-top-main.jpg</mt:Assets>) no-repeat center bottom;
     background-size: cover;
     color: #ffffff;
     text-shadow: 0 1px 0px #000;
@@ -442,7 +442,7 @@ body#sitetop {
     width: 100%;
     min-height: 400px;
     padding: 7em 0 3em 0;
-    background-image: url(<mt:Assets field:bg_top_main="1" lastn="1"><mt:AssetURL><mt:Else><mt:BlogURL encode_html="1">images/bg-top-main.jpg</mt:Assets>);
+    background-image: url(<mt:Assets field:toppage_eyecatch="1" lastn="1"><mt:AssetURL><mt:Else><mt:BlogURL encode_html="1">images/bg-top-main.jpg</mt:Assets>);
     background-size: cover;
     text-align: center;
     border-bottom: solid 1px #e9e9e9;
@@ -495,7 +495,7 @@ body#sitetop {
 .webpages img {
     height: auto;
 }
-.pageimage {
+.page_main_image {
     height: 400px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -661,7 +661,7 @@ footer .col-sm-6 {
 #mainvisual {
 	background-attachment: scroll;
 }
-.pageimage {
+.page_main_image {
 	background-attachment: scroll;
     height: 250px;
 }

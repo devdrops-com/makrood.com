@@ -1,7 +1,7 @@
         <mt:Entries paginate_by="$paginate">
           <article class="entry clearfix">
-            <mt:If tag="CustomFieldValue" identifier="main_image_entry">
-            <figure><img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="240"></mt:CustomFieldAsset>"></figure>
+            <mt:If tag="CustomFieldValue" identifier="entry_main_image">
+            <figure><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="240"></mt:CustomFieldAsset>"></figure>
             <mt:Else>
             <mt:EntryAssets type="image" sort_order="ascend" limit="1">
             <figure><img src="<mt:AssetThumbnailURL width="240">"></figure>
