@@ -23,34 +23,28 @@
     <!-- Microdata -->
     <link itemprop="url" href="./">
     <link itemprop="image" href="./images/ogimage.jpg">
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/vendor/modernizr.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
   </head>
 
   <body id="sitetop">
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
-    <![endif]-->
+    <!--[if lt IE 10]><p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
     <header class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navigation" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <h1 class="navbar-brand"><a href="#sitetop"><img src="./images/header-logo.png" alt="マックルー"></a></h1> </div>
+          <h1 class="navbar-brand"><a href="./#sitetop"><img src="./images/header-logo.png" alt="Herbal Shop Makrood"></a></h1></div>
         <nav class="collapse navbar-collapse" id="global-navigation">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#how-to-drink">How to Drink</a></li>
-            <li><a href="#concept">Concept</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#access">Access</a></li>
-            <li><a href="/about/index.html">About</a></li>
-            <li><a href="/contact/index.html">Contact</a></li>
+            <li><a href="./#how-to-drink">How to Drink</a></li>
+            <li><a href="./#concept">Concept</a></li>
+            <li><a href="./#products">Products</a></li>
+            <li><a href="./#access">Access</a></li>
+            <li><a href="./about/index.html">About</a></li>
+            <li><a href="./contact/index.html">Contact</a></li>
             <li><a href="/news.html">Blog</a></li>
             <li class="navbar-social-links">
               <ul class="list-inline">
@@ -71,7 +65,7 @@
         </div>
       </div>
     </div>
-    <section class="webpages" id="how-to-drink">
+    <section id="how-to-drink" class="webpages">
       <div class="container">
         <h2 class="webpages-title">美味しいハーブティーの飲みかた。</h2>
         <p class="webpages-subtitle">How to Drink</p>
@@ -97,9 +91,9 @@
         </div>
       </div>
     </section>
-    <section class="webpages pageeven" id="concept">
+    <section id="concept" class="webpages pageeven">
       <div class="container">
-        <h2 class="webpages-title">こだわりの食材を使っています</h2>
+        <h2 class="webpages-title">こだわりの食材を使っています。</h2>
         <p class="webpages-subtitle">Concept</p>
         <div class="row concept-food">
           <div class="col-xs-12 col-sm-4">
@@ -123,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section class="webpages" id="products">
+    <section id="products" class="webpages">
       <div class="container">
         <h2 class="webpages-title">製品ラインナップ</h2>
         <p class="webpages-subtitle">Products</p>
@@ -171,28 +165,20 @@
         </div>
       </div>
     </section>
-    <section class="webpages" id="access" onload="initialize()">
+    <section id="access" class="webpages pageeven">
+      <div class="container">
       <h2 class="webpages-title">アクセス</h2>
       <p class="webpages-subtitle">Access</p>
-      <div id="access-map"></div>
+        <div id="access-map" onload="initialize()"></div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-6"><address>
-              <strong>Herbal Shop Makrood</strong>
-              <br>〒899-0013
-              <br>鹿児島県鹿児島市荒田2-14-13 KICSビル 103
-              <br><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<a href="https://www.google.co.jp/maps/@31.571655,130.551444,15z">Google Mapで表示する</a>
-            </address>
-            <dl class="dl-horizontal">
-              <dt>Tel</dt>
-              <dd>0120-22-8759</dd>
-              <dt>Mail</dt>
-              <dd>「<a href="./contact/">お問い合わせ</a>」ページよりご予約・お問い合わせを承っております。</dd>
-              <dt>Open</dt>
-              <dd>11:00−16:00（13:30 L.O.）</dd>
-              <dt>Closed</dt>
+          <div class="col-sm-6"><address><strong>Herbal Shop Makrood</strong><br>〒899-0013 <br>鹿児島県鹿児島市荒田2-14-13 KICSビル 103 <br><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<a href="https://www.google.co.jp/maps/@31.571655,130.551444,15z">Google Mapで表示する</a></address>
+            <dl class="dl-horizontal"><dt>Tel</dt>
+              <dd>0120-22-8759</dd><dt>Mail</dt>
+              <dd>「<a href="./contact/">お問い合わせ</a>」ページよりご予約・お問い合わせを承っております。</dd><dt>Open</dt>
+              <dd>11:00−16:00（13:30 L.O.）</dd><dt>Closed</dt>
               <dd>土・日曜日、祝祭日</dd>
-            </dl>
+              </dl>
           </div>
           <div class="col-sm-6">
             <ul class="list-unstyled">
@@ -204,45 +190,19 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
-    <section class="webpages" id="top-news">
+    <section id="top-news" class="webpages">
       <div class="container">
         <h2 class="webpages-title">お知らせ</h2>
         <p class="webpages-subtitle">News</p>
         <div class="row">
           <div class="col-sm-3">
-            <a href="./2016/08/post-12.html">
-              <figure class="noimage"><span>No image</span></figure>
-              <div class="entry-detail">
-                <h3 class="top-news-title">ダミータイトル</h3>
-                <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-3">
-            <a href="./2016/08/post-3.html">
-              <figure class="noimage"><span>No image</span></figure>
-              <div class="entry-detail">
-                <h3 class="top-news-title">ダミータイトル</h3>
-                <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-3">
-            <a href="./2016/08/post-2.html">
-              <figure class="noimage"><span>No image</span></figure>
-              <div class="entry-detail">
-                <h3 class="top-news-title">ダミータイトル</h3>
-                <p class="entry-excerpt">ダミー本文 ダミー本文 ダミー本文</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-3">
             <a href="./2016/08/post.html">
               <figure class="noimage"><span>No image</span></figure>
               <div class="entry-detail">
-                <h3 class="top-news-title">ウェブサイトはじめました。</h3>
-                <p class="entry-excerpt">ウェブサイトはじめました。 ウェブサイトはじめました。 ウェブサイトはじめました...</p>
+                <h3 class="top-news-title">ウェブサイトをオープンしました。</h3>
+                <p class="entry-excerpt">ウェブサイトをオープンしました。 今後ともよろしくお願い申し上げます。</p>
               </div>
             </a>
           </div>
@@ -256,13 +216,12 @@
       <div class="container">
         <div class="footer-logo"><img src="./images/footer-logo.png" alt=""></div>
         <ul class="footer-menu list-inline">
-          <li><a href="#how-to-drink">How to Drink</a></li>
-          <li><a href="#concept">Concept</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#access">Access</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./#how-to-drink">How to Drink</a></li>
+          <li><a href="./#concept">Concept</a></li>
+          <li><a href="./#products">Products</a></li>
+          <li><a href="./#access">Access</a></li>
+          <li><a href="./about/index.html">About</a></li>
+          <li><a href="./contact/index.html">Contact</a></li>
           <li><a href="/news.html">Blog</a></li>
         </ul>
         <ul class="footer-links list-inline">
