@@ -27,84 +27,73 @@
 <mt:Include module="common_stylesheet">
 <mt:Include module="common_head_js">
 </head>
-
-<mt:SetVarBlock name="thispage">TOP</mt:SetVarBlock>
 <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
-
 <body id="sitetop">
-
   <!--[if lt IE 10]>
     <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
   <![endif]-->
-
-<mt:Include module="header">
-
-<div class="mainvisual top">
-  <div class="mainvisual-eyecatch">
-    <div class="mainvisual-eyecatch-symbol"><img src="./images/mainvisual-eyecatch-symbol.png" alt="Herbal Shop Makrood"></div>
-    <div id="mainvisual-eyecatch-slider">
-      <mt:Assets field:toppage_eyecatch="1" lastn="3">
-        <div class="mainvisual-eyecatch-slider-image" style="background-image: url('<mt:AssetURL>')"></div>
-      </mt:Assets>
+  <mt:Include module="header">
+  <div class="mainvisual top">
+    <div class="mainvisual-eyecatch">
+      <div class="mainvisual-eyecatch-symbol"><img src="./images/mainvisual-eyecatch-symbol.png" alt="Herbal Shop Makrood"></div>
+      <div id="mainvisual-eyecatch-slider">
+        <mt:Assets field:toppage_eyecatch="1" lastn="3">
+          <div class="mainvisual-eyecatch-slider-image" style="background-image: url('<mt:AssetURL>')"></div>
+        </mt:Assets>
+      </div>
     </div>
   </div>
-</div>
-
-<mt:Pages sort_order="ascend" no_folder="1">
-<mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="image_position"></mt:SetVarBlock>
-<section  id="<mt:PageBasename>" class="webpages<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="page_main_image"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
-  <mt:If name="iposition" eq="上に配置">
-    <mt:If tag="CustomFieldValue" identifier="page_main_image">
-      <div class="page_main_image top" style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
-    </mt:If>
-  </mt:If>
-  <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
-    <h2 class="webpages-title"><mt:PageTitle encode_html="1"></h2>
-    <p class="webpages-subtitle"><mt:CustomFieldValue identifier="page_english_title"></p>
-    <mt:PageBody>
-    <mt:PageMore>
-  </div>
-  <mt:If name="iposition" eq="下に配置">
-    <mt:If tag="CustomFieldValue" identifier="page_main_image">
-      <div class="page_main_image bottom" style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
-    </mt:If>
-  </mt:If>
-</section>
-</mt:Pages>
-
-<mt:If name="entrycount" gt="0">
-<section id="top-news" class="webpages">
-  <div class="container">
-    <h2 class="webpages-title">お知らせ</h2>
-    <p class="webpages-subtitle">News</p>
-    <div class="row">
-      <mt:Entries lastn="4">
-        <div class="col-sm-3">
-          <a href="<mt:EntryPermalink>">
-            <mt:If tag="CustomFieldValue" identifier="entry_main_image">
-               <figure><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
-            <mt:Else>
-              <mt:EntryAssets type="image" sort_order="ascend" limit="1">
-                <figure><img src="<mt:AssetThumbnailURL width="320">" alt="<mt:EntryTitle>"></figure>
-              <mt:Else>
-                <figure class="noimage"><span>No image</span></figure>
-              </mt:EntryAssets>
-            </mt:If>
-            <div class="entry-detail">
-              <h3 class="top-news-title"><mt:EntryTitle encode_html="1"></h3>
-              <p class="entry-excerpt"><mt:EntryExcerpt></p>
+  <mt:Pages sort_order="ascend" no_folder="1">
+    <mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="image_position"></mt:SetVarBlock>
+    <section  id="<mt:PageBasename>" class="webpages<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="page_main_image"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
+      <mt:If name="iposition" eq="上に配置">
+        <mt:If tag="CustomFieldValue" identifier="page_main_image">
+          <div class="page_main_image top" style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
+        </mt:If>
+      </mt:If>
+      <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
+        <h2 class="webpages-title"><mt:PageTitle encode_html="1"></h2>
+        <p class="webpages-subtitle"><mt:CustomFieldValue identifier="page_english_title"></p>
+        <mt:PageBody>
+        <mt:PageMore>
+      </div>
+      <mt:If name="iposition" eq="下に配置">
+        <mt:If tag="CustomFieldValue" identifier="page_main_image">
+          <div class="page_main_image bottom" style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetURL></mt:CustomFieldAsset>');"></div>
+        </mt:If>
+      </mt:If>
+    </section>
+  </mt:Pages>
+  <mt:If name="entrycount" gt="0">
+    <section id="top-news" class="webpages">
+      <div class="container">
+        <h2 class="webpages-title">お知らせ</h2>
+        <p class="webpages-subtitle">News</p>
+        <div class="row">
+          <mt:Entries lastn="4">
+            <div class="col-sm-3">
+              <a href="<mt:EntryPermalink>">
+                <mt:If tag="CustomFieldValue" identifier="entry_main_image">
+                   <figure><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
+                <mt:Else>
+                  <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+                    <figure><img src="<mt:AssetThumbnailURL width="320">" alt="<mt:EntryTitle>"></figure>
+                  <mt:Else>
+                    <figure class="noimage"><span>No image</span></figure>
+                  </mt:EntryAssets>
+                </mt:If>
+                <div class="entry-detail">
+                  <h3 class="top-news-title"><mt:EntryTitle encode_html="1"></h3>
+                  <p class="entry-excerpt"><mt:EntryExcerpt></p>
+                </div>
+              </a>
             </div>
-          </a>
+          </mt:Entries>
         </div>
-      </mt:Entries>
-    </div>
-  </div>
-</section>
-</mt:If>
-
-<mt:Include module="footer">
-
-<mt:Include module="common_bottom_js">
-
+      </div>
+    </section>
+  </mt:If>
+  <mt:Include module="footer">
+  <mt:Include module="common_bottom_js">
 </body>
 </html>

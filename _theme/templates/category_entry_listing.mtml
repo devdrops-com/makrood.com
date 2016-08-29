@@ -27,44 +27,35 @@
 <mt:Include module="common_stylesheet">
 <mt:Include module="common_head_js">
 </head>
-
-<body id="top">
-
-<mt:SetVarBlock name="thispage">blog</mt:SetVarBlock>
-
-<mt:Include module="header">
-
-<section class="mainvisual-lower">
-  <div class="overray"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="mainvisual-lower-title">ニュース</h2>
+<body id="sitetop">
+  <mt:Include module="header">
+  <section class="mainvisual-lower">
+    <div class="overray"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="mainvisual-lower-title">ニュース</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="content">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="col-sm-9">
+          <h1 class="page-title"><mt:CategoryLabel encode_html="1"></h1>
+          <div class="entry-list">
+            <mt:Include module="entry-list">
+          </div>
+          <div class="holder"></div>
+        </div><!-- /primary-content -->
+        <aside class="col-sm-3 pull-right sidebar">
+          <mt:Include module="blog-sidemenu">
+        </aside><!-- sidebar -->
       </div>
     </div>
   </div>
-</section>
-
-<div id="content">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="col-sm-9">
-        <h1 class="page-title"><mt:CategoryLabel encode_html="1"></h1>
-        <div class="entry-list">
-        <mt:Include module="entry-list">
-        </div>
-        <div class="holder"></div>
-      </div><!-- /primary-content -->
-      <aside class="col-sm-3 pull-right sidebar">
-      <mt:Include module="blog-sidemenu">
-      </aside><!-- sidebar -->
-    </div>
-  </div>
-</div>
-
-<mt:Include module="footer">
-
-<mt:Include module="common_bottom_js">
-
+  <mt:Include module="footer">
+  <mt:Include module="common_bottom_js">
 </body>
 </html>
