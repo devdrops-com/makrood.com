@@ -41,7 +41,7 @@
     $('#top-news [class^="col-"] > a').tile(4);
   }
   // Google Map
-  function initialize() {
+  function initMap() {
     var latlng = new google.maps.LatLng(31.571655, 130.551444);
     var myOptions = {
       zoom: 18,
@@ -80,5 +80,5 @@
     map.mapTypes.set('MY_GOOGLEMAP', sampleType);
     map.setMapTypeId('MY_GOOGLEMAP');
   }
-  google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initMap);
 })();
