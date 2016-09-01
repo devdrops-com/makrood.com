@@ -27,7 +27,6 @@
 <mt:Include module="common_stylesheet">
 <mt:Include module="common_head_js">
 </head>
-<mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
 <body id="sitetop">
   <!--[if lt IE 10]>
     <p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p>
@@ -64,6 +63,7 @@
       </mt:If>
     </section>
   </mt:Pages>
+  <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
   <mt:If name="entrycount" gt="0">
     <section id="top-news" class="webpages">
       <div class="container">

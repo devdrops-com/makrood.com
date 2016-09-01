@@ -1356,8 +1356,25 @@ img {
     }
   }
 
-  .entry-list .entrytitle {
-    margin-bottom: 15px;
+  .entry-list {
+    .entry {
+      margin-bottom: 3em;
+      padding-bottom: 3em;
+      border-bottom: solid 1px $gray-lighter;
+      .entry-title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: $font-size-h3;
+      }
+      .entry-excerpt {
+        margin-bottom: 1em;
+      }
+      .entry-main-image {
+        float: right;
+        margin-left: 2em;
+        margin-bottom: 1em;
+      }
+    }
   }
 }
 
@@ -1391,10 +1408,6 @@ img {
       }
     }
   }
-}
-
-.entry-excerpt {
-  margin-bottom: 1em;
 }
 
 .sidebar {
