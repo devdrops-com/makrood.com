@@ -1,10 +1,12 @@
 <mt:Entries paginate_by="$paginate">
   <article class="entry clearfix">
     <mt:If tag="CustomFieldValue" identifier="entry_main_image">
-      <figure class="entry-main-image"><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="240"></mt:CustomFieldAsset>"></figure>
+      <mt:CustomFieldAsset identifier="entry_main_image">
+        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></figure>
+      </mt:CustomFieldAsset>
     <mt:Else>
       <mt:EntryAssets type="image" sort_order="ascend" limit="1">
-        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240">"></figure>
+        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></figure>
       </mt:EntryAssets>
     </mt:If>
     <div class="entry-meta">
