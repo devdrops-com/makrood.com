@@ -11,6 +11,7 @@
     }
   });
   $('#goto-pagetop a').smoothScroll();
+  $('#footer-menu a').smoothScroll();
   // メインビジュアル スライダー min-height設定
   $('#mainvisual-eyecatch-slider .mainvisual-eyecatch-slider-image').css('min-height', $(window).height());
   // メインビジュアル スライダー
