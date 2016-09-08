@@ -1386,9 +1386,14 @@ img {
       }
 
       .entry-main-image {
-        float: right;
-        margin-bottom: 1em;
-        margin-left: 2em;
+        @media (max-width: $screen-xs-max) {
+          display: none;
+        }
+        @media(min-width: $screen-sm-min) {
+          float: right;
+          margin-bottom: 1em;
+          margin-left: 2em;
+        }
       }
     }
   }
@@ -1424,33 +1429,33 @@ img {
 
 .entry-meta {
   margin-bottom: 1em;
-  font-size: 86%;
-
-  .category {
-    margin-right: 8px;
-    padding: 0.5em 0.8em;
-    background: $gray-light;
-    color: $white;
-  }
+  font-size: $font-size-h6;
+  line-height: 1;
 
   time {
     display: inline-block;
     margin-right: 0.5em;
-    padding: 0.2em 0.3em 0.2em 0.5em;
+    padding: 0.3em;
     background: $gray-lighter;
 
     span {
       display: inline-block;
 
-      &.monthday {
-        padding: 0.2em 0.5em;
-        background: $white;
+      &.year {
+        padding: 0.3em;
       }
 
-      &.year {
-        padding-right: 0.3em;
+      &.monthday {
+        padding: 0.3em 0.5em;
+        background: $white;
       }
     }
+  }
+
+  .category {
+    padding: 0.5em 0.8em;
+    background: $gray-light;
+    color: $white;
   }
 }
 
@@ -1458,12 +1463,12 @@ img {
   .sidebar-nav {
     margin-bottom: 2em;
     padding-bottom: 2em;
-    border-bottom: solid 3px #e9e9e9;
+    // border-bottom: solid 3px #e9e9e9;
 
     .sidebar-title {
       margin: 0 0 20px;
       color: $palet-1;
-      font-size: $font-size-h3;
+      font-size: $font-size-h4;
     }
 
     ul {
@@ -1473,7 +1478,7 @@ img {
       li {
         margin-bottom: 0.7em;
         padding-bottom: 0.7em;
-        border-bottom: solid 1px #e9e9e9;
+        // border-bottom: solid 1px #e9e9e9;
         list-style: none;
 
         &:last-of-type {
