@@ -993,6 +993,8 @@ img {
       @include transition(margin-top 0.3s ease-in-out);
 
       > li {
+        line-height: 20px;
+
         &.navbar-social-links {
           margin-left: 10px;
         }
@@ -1332,35 +1334,6 @@ img {
   height: 15em;
   background: url("../images/toppage-eyecatch-1.jpg") no-repeat center bottom;
   background-size: cover;
-  // background-color: rgba($white, 1);
-  // color: $white;
-  // text-shadow: 0 1px 0 #000;
-
-  // .overray {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: $palet-2;
-  //   opacity: 0.5;
-  // }
-
-  // .row {
-  //   display: table;
-  //   width: 100%;
-  //
-  //   .col-sm-12 {
-  //     display: table-cell;
-  //     width: 100%;
-  //     vertical-align: middle;
-  //   }
-  // }
-
-  // .mainvisual-lower-title {
-  //   margin: 0;
-  //   font-size: 40px;
-  // }
 }
 
 .content {
@@ -1388,11 +1361,11 @@ img {
     &.page {
       max-width: 900px;
 
-      .page-title {
-        margin-top: 0;
-        margin-bottom: 50px;
-        text-align: center;
-      }
+      // .page-title {
+      //   margin-top: 0;
+      //   margin-bottom: 50px;
+      //   text-align: center;
+      // }
     }
   }
 
@@ -1425,6 +1398,7 @@ img {
       -webkit-filter: brightness(80%);
 
       @include transition(all 0.5s ease-in-out);
+
       &:hover {
         -webkit-filter: brightness(100%);
       }
