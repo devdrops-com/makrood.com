@@ -165,13 +165,13 @@ $headings-font-weight: 600;
 //
 // $btn-font-weight:                normal !default;
 //
-// $btn-default-color:              #333 !default;
-// $btn-default-bg:                 #fff !default;
-// $btn-default-border:             #ccc !default;
+$btn-default-color:              $gray-darker;
+$btn-default-bg:                 $white;
+$btn-default-border:             $gray-darker;
 //
-// $btn-primary-color:              #fff !default;
-// $btn-primary-bg:                 $brand-primary !default;
-// $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $palet-1;
+$btn-primary-border:             darken($btn-primary-bg, 5%);
 //
 // $btn-success-color:              #fff !default;
 // $btn-success-bg:                 $brand-success !default;
@@ -192,9 +192,9 @@ $headings-font-weight: 600;
 // $btn-link-disabled-color:        $gray-light !default;
 //
 // // Allows for customizing button radius independently from global border radius
-// $btn-border-radius-base:         $border-radius-base !default;
-// $btn-border-radius-large:        $border-radius-large !default;
-// $btn-border-radius-small:        $border-radius-small !default;
+$btn-border-radius-base:         40px;
+$btn-border-radius-large:        50px;
+$btn-border-radius-small:        30px;
 //
 //
 // //== Forms
@@ -916,6 +916,29 @@ img {
   height: auto;
 }
 
+// .btn-default {
+//   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+// }
+// .btn-primary {
+//   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+// }
+// // Success appears as green
+// .btn-success {
+//   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+// }
+// // Info appears as blue-green
+// .btn-info {
+//   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+// }
+// // Warning appears as orange
+// .btn-warning {
+//   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+// }
+// // Danger and error appear as red
+// .btn-danger {
+//   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+// }
+
 .breadcrumb {
   margin-top: 20px;
   // margin-bottom: 0;
@@ -1159,6 +1182,15 @@ img {
 
     .products-info-detail {
       margin-top: 30px;
+    }
+  }
+
+  .products-more {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    .btn {
+      min-width: 300px;
     }
   }
 
