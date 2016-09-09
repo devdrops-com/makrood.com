@@ -28,39 +28,31 @@
 <mt:Include module="common_head_js">
 </head>
 <body id="sitetop">
-
 <mt:Include module="header">
-
 <section class="mainvisual-lower">
-  <div class="overray"></div>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="mainvisual-lower-title">ニュース</h2>
-      </div>
-    </div>
+    <ol class="breadcrumb">
+      <li><a href="<mt:WebsiteURL>">Home</a></li>
+      <li class="active">ニュース</li>
+    </ol>
   </div>
 </section>
-
 <div class="content">
   <div class="container">
-    <div class="row-fluid">
+    <div class="row">
       <div class="col-sm-9">
         <div class="entry-list">
-        <mt:Include module="entry-list">
+          <mt:Include module="entry-list">
         </div>
         <div class="holder"></div>
-      </div><!-- /primary-content -->
-      <aside class="col-sm-3 pull-right sidebar">
-      <mt:Include module="blog-sidemenu">
-      </aside><!-- sidebar -->
+      </div><
+      <aside class="col-sm-3 sidebar">
+        <mt:Include module="blog-sidemenu">
+      </aside>
     </div>
   </div>
 </div>
-
 <mt:Include module="footer">
-
 <mt:Include module="common_bottom_js">
-
 </body>
 </html>

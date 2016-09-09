@@ -29,19 +29,20 @@
 </head>
 <body id="sitetop">
   <mt:Include module="header">
-  <section class="mainvisual-lower">
-    <div class="overray"></div>
+  <div class="mainvisual-lower"<mt:If tag="CustomFieldValue" identifier="entry_main_image"> style="background-image: url('<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset>')"</mt:If>>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 class="mainvisual-lower-title">ニュース</h2>
-        </div>
-      </div>
+      <ol class="breadcrumb">
+        <li><a href="<mt:WebsiteURL>">Home</a></li>
+        <mt:EntryCategories type="primary">
+          <li><a href="<mt:CategoryArchiveLink>" title="<mt:CategoryLabel>"><mt:CategoryLabel></a></li>
+        </mt:EntryCategories>
+        <li class="active"><mt:EntryTitle></li>
+      </ol>
     </div>
-  </section>
+  </div>
   <div class="content">
     <div class="container">
-      <div class="row-fluid">
+      <div class="row">
         <div class="col-sm-9">
           <article id="entry-detail">
             <div class="entry-meta">
@@ -55,7 +56,7 @@
             </div>
           </article>
         </div><!-- /primary-content -->
-        <aside class="col-sm-3 pull-right sidebar">
+        <aside class="col-sm-3 sidebar">
           <mt:Include module="blog-sidemenu">
         </aside><!-- sidebar -->
       </div>

@@ -29,19 +29,22 @@
 </head>
 <body id="sitetop">
   <mt:Include module="header">
-  <section class="mainvisual-lower">
-    <div class="overray"></div>
+  <div class="mainvisual-lower"<mt:If tag="CustomFieldValue" identifier="page_main_image"> style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset>')"</mt:If>>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 class="mainvisual-lower-title"><mt:PageTitle encode_html="1"></h2>
-        </div>
-      </div>
+      <ol class="breadcrumb">
+        <li><a href="<mt:WebsiteURL>">Home</a></li>
+        <mt:ParentFolders>
+          <li><a href="<mt:BlogURL><mt:FolderPath>" title="<mt:FolderLabel>"><mt:FolderLabel></a></li>
+        </mt:ParentFolders>
+        <li class="active"><mt:PageTitle></li>
+      </ol>
     </div>
-  </section>
+  </div>
   <div class="content">
     <div class="container page">
       <article>
+        <h2 class="content-title"><mt:PageTitle></h2>
+        <p class="content-subtitle"><mt:PageBasename></p>
         <div class="page-body">
           <mt:PageBody>
           <mt:PageMore>

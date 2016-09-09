@@ -28,21 +28,21 @@
 </head>
 <body id="sitetop">
   <mt:Include module="header">
-  <section class="mainvisual-lower">
-    <div class="overray"></div>
+  <div class="mainvisual-lower">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 class="mainvisual-lower-title">お探しのページは見つかりませんでした</h2>
-        </div>
-      </div>
+      <ol class="breadcrumb">
+        <li><a href="<mt:WebsiteURL>">Home</a></li>
+        <li class="active">お探しのページは見つかりませんでした</li>
+      </ol>
     </div>
-  </section>
+  </div>
   <div class="content">
     <div class="container page">
       <article>
+        <h2 class="content-title">お探しのページは見つかりませんでした</h2>
+        <p class="content-subtitle">404 ERROR</p>
         <div class="page-body">
-          <p id="main-text"><a href="<mt:BlogURL encode_html="1">">トップページに戻る</a></p>
+          <p><a href="<mt:BlogURL encode_html="1">">トップページに戻る</a></p>
         </div>
       </article>
     </div>
