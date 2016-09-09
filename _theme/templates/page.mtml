@@ -33,8 +33,13 @@
     <div class="container">
       <ol class="breadcrumb">
         <li><a href="<mt:WebsiteURL>">Home</a></li>
-        <mt:ParentFolders>
-          <li><a href="<mt:BlogURL><mt:FolderPath>" title="<mt:FolderLabel>"><mt:FolderLabel></a></li>
+        <mt:SetVarBlock name="page_base_name"><mt:PageBaseName></mt:SetVarBlock>
+        <mt:SetVar name="exclude_current" value="0">
+        <mt:If name="page_base_name" eq="index">
+          <mt:SetVar name="exclude_current" value="1">
+        </mt:If>
+        <mt:ParentFolders exclude_current="$exclude_current">
+          <li><a href="<mt:BlogURL><mt:FolderPath>/" title="<mt:FolderLabel>"><mt:FolderLabel></a></li>
         </mt:ParentFolders>
         <li class="active"><mt:PageTitle></li>
       </ol>
