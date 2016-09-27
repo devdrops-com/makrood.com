@@ -165,13 +165,13 @@ $headings-font-weight: 600;
 //
 // $btn-font-weight:                normal !default;
 //
-$btn-default-color:              $gray-darker;
-$btn-default-bg:                 $white;
-$btn-default-border:             $gray-darker;
+$btn-default-color: $gray-darker;
+$btn-default-bg: $white;
+$btn-default-border: $gray-darker;
 //
-$btn-primary-color:              $white;
-$btn-primary-bg:                 $palet-1;
-$btn-primary-border:             darken($btn-primary-bg, 5%);
+$btn-primary-color: $white;
+$btn-primary-bg: $palet-1;
+$btn-primary-border: darken($btn-primary-bg, 5%);
 //
 // $btn-success-color:              #fff !default;
 // $btn-success-bg:                 $brand-success !default;
@@ -192,9 +192,9 @@ $btn-primary-border:             darken($btn-primary-bg, 5%);
 // $btn-link-disabled-color:        $gray-light !default;
 //
 // // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         40px;
-$btn-border-radius-large:        50px;
-$btn-border-radius-small:        30px;
+$btn-border-radius-base: 40px;
+$btn-border-radius-large: 50px;
+$btn-border-radius-small: 30px;
 //
 //
 // //== Forms
@@ -955,7 +955,6 @@ img {
 
   &.sticky {
     background-color: rgba($white, 1);
-
     @include box-shadow(0 0px 3px 0 rgba(0,0,0,0.5));
     @media(min-width: $screen-md-min) {
       .navbar-brand {
@@ -987,12 +986,10 @@ img {
       height: auto;
       font-size: 0;
       line-height: 0;
-
       @include transition(padding 0.3s ease-in-out);
 
       img {
         height: 70px;
-
         @include transition(height 0.3s ease-in-out);
       }
     }
@@ -1012,7 +1009,6 @@ img {
     }
     @media(min-width: $screen-md-min) {
       margin-top: 35px;
-
       @include transition(margin-top 0.3s ease-in-out);
 
       > li {
@@ -1106,6 +1102,16 @@ img {
     font-weight: 600;
     font-style: italic;
   }
+
+  .webpages-more {
+    margin-top: 80px;
+    margin-bottom: 0;
+    text-align: center;
+
+    .btn {
+      min-width: 300px;
+    }
+  }
 }
 
 #how-to-drink {
@@ -1185,15 +1191,6 @@ img {
     }
   }
 
-  .products-more {
-    margin-top: 80px;
-    margin-bottom: 80px;
-    text-align: center;
-    .btn {
-      min-width: 300px;
-    }
-  }
-
   .products-gokonyu {
     margin: 80px auto 0;
     padding: 30px;
@@ -1266,6 +1263,49 @@ img {
 }
 
 #top-news {
+  .top-news-list {
+    margin: 0 auto 50px;
+    padding-left: 0;
+    max-width: 900px;
+    border-top: 1px solid $gray-darker;
+    list-style: none;
+
+    > li {
+      border-bottom: 1px solid $gray-lighter;
+
+      .top-news-list-time {
+        color: $gray-light;
+        @media (max-width: $screen-xs-max) {
+          display: block;
+        }
+        @media(min-width: $screen-sm-min) {
+          margin-right: 3em;
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        padding: 1em;
+
+        &:hover:after {
+          right: 0.5em;
+        }
+
+        &:after {
+          @include transition(right 0.5s ease-in-out);
+          position: absolute;
+          right: 1em;
+          content: "\f054";
+          font-family: FontAwesome;
+        }
+
+      }
+    }
+  }
+}
+
+#top-column {
   a:hover {
     text-decoration: none;
   }
@@ -1292,7 +1332,7 @@ img {
   .entry-detail {
     padding: 1em;
 
-    .top-news-title {
+    .top-column-title {
       margin: 0 0 0.5em;
       text-align: center;
       font-size: $font-size-h3;
@@ -1433,7 +1473,6 @@ img {
   .column-list {
     .entry-main-image img {
       -webkit-filter: brightness(80%);
-
       @include transition(all 0.5s ease-in-out);
 
       &:hover {
