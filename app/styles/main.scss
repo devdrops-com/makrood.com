@@ -1356,24 +1356,67 @@ img {
   padding: 80px 0;
   background: $palet-5;
   background-image: url("../images/footer-background-image.jpg");
-  color: $white;
-  text-align: center;
+  color: $palet-2;
+  // text-align: center;
 
   a {
-    color: $white;
+    color: $palet-2;
   }
 
   .footer-logo {
     margin-bottom: 30px;
+    text-align: center;
   }
 
-  #footer-menu {
+  .footer-about {
+    font-size: $font-size-h6;
     margin-bottom: 30px;
-    letter-spacing: 0.2em;
-    font-weight: bold;
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+    }
+    @media(min-width: $screen-sm-min) {
+      text-align: right;
+    }
+
+    address {
+      margin-bottom: 0.8em;
+
+      strong {
+        display: inline-block;
+        margin-bottom: 0.5em;
+        font-size: $font-size-h4;
+        line-height: 2;
+      }
+    }
+  }
+
+  .footer-menu {
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+    @media(min-width: $screen-sm-min) {
+      font-size: $font-size-h6;
+
+      ul {
+        padding-left: 1.5em;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          left: -1em;
+          content: "\f105";
+          font-family: FontAwesome;
+        }
+      }
+    }
   }
 
   .footer-links {
+    text-align: center;
     margin-bottom: 30px;
 
     .facebook,
@@ -1395,6 +1438,7 @@ img {
   }
 
   .footer-copyright {
+    text-align: center;
     margin-bottom: 0;
     letter-spacing: 0.2em;
   }
