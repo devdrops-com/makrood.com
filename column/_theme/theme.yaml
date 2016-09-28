@@ -6,8 +6,6 @@ author_name: "Nawagate"
 description: "Herbal Shop Makrood"
 class: "blog"
 elements:
-  blog_static_files:
-    component: '~'
   custom_fields:
     component: commercial
     data:
