@@ -9,10 +9,6 @@ elements:
   blog_static_files:
     component: '~'
     data:
-      - fonts
-      - images
-      - scripts
-      - styles
     importer: blog_static_files
   custom_fields:
     component: commercial
