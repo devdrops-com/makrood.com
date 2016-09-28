@@ -91,11 +91,6 @@ elements:
             label: インデックスページ
             outfile: index.html
             rebuild_me: 1
-          news:
-            filename: news.html.mtml
-            label: ニュース TOP
-            outfile: news.html
-            rebuild_me: 1
           styles:
             filename: styles.css.mtml
             label: スタイルシート
