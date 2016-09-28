@@ -8,8 +8,6 @@ class: "blog"
 elements:
   blog_static_files:
     component: '~'
-    data:
-    importer: blog_static_files
   custom_fields:
     component: commercial
     data:
