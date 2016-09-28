@@ -3,18 +3,29 @@
 </div>
 <footer class="footer">
   <div class="container">
-    <div class="footer-logo"><img src="<mt:WebsiteURL>images/footer-logo.png" alt=""></div>
-    <ul id="footer-menu" class="list-inline">
-      <mt:Pages sort_order="ascend" no_folder="1">
-        <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:CustomFieldValue identifier="page_english_title"></a></li>
-      </mt:Pages>
-      <li><a href="<mt:WebsiteURL>about/index.html">About</a></li>
-      <li><a href="<mt:WebsiteURL>contact/index.html">Contact</a></li>
-      <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
-      <mt:If name="entrycount" gt="0">
-        <li><a href="<mt:BlogRelativeURL>news.html">News</a></li>
-      </mt:If>
-    </ul>
+    <div class="footer-logo"><img src="<mt:WebsiteURL>images/footer-logo.png" alt="ハーバルショップマックルー"></div>
+    <div class="row">
+      <div class="col-sm-6 footer-about"><address><strong>Herbal Shop Makrood</strong><br>〒899-0013 鹿児島県鹿児島市荒田2-14-13 KICSビル 103 <br><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<a href="https://maps.google.co.jp/maps?q=31.571610,130.551433" target="_blank">Google Mapで表示する</a></address>
+        <p>Tel：0120-22-8759 <br>Mail：「<a href="https://www.makrood.com/contact/">お問い合わせ</a>」ページ<br>Open：11:00−16:00<br>Closed：土・日曜日、祝祭日 </p>
+      </div>
+      <div class="col-sm-2 footer-menu">
+        <ul>
+          <li><a href="<mt:WebsiteURL>#sitetop">ホーム</a></li>
+          <li><a href="<mt:WebsiteURL>lemongrass-tea/index.html">レモングラス・ティー</a></li>
+          <li><a href="<mt:WebsiteURL>news.html">お知らせ</a></li>
+          <li><a href="<mt:WebsiteURL>column/index.html">コラム 〜小さな畑から〜</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 footer-menu">
+        <ul>
+          <li><a href="<mt:WebsiteURL>about/index.html">会社情報</a></li>
+          <li><a href="<mt:WebsiteURL>cafe/index.html">カフェ・マックルー</a></li>
+          <li><a href="<mt:WebsiteURL>btob/index.html">仕入れご担当者様へ</a></li>
+          <li><a href="<mt:WebsiteURL>contact/index.html">お問い合わせ</a></li>
+          <li><a href="<mt:WebsiteURL>contact/privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
     <ul class="footer-links list-inline">
       <li class="facebook"><a href="https://www.facebook.com/cafe.makrood/" target="_blank"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
       <li class="instagram"><a href="https://www.instagram.com/cafe_makrood/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>

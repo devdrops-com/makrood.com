@@ -5,15 +5,13 @@
       <h1 class="navbar-brand"><a href="<mt:WebsiteURL>#sitetop"><img src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:WebsiteName>"></a></h1></div>
     <nav class="collapse navbar-collapse" id="global-navigation">
       <ul class="nav navbar-nav navbar-right">
-        <mt:Pages sort_order="ascend" no_folder="1">
-          <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:CustomFieldValue identifier="page_english_title"></a></li>
-        </mt:Pages>
-        <li><a href="<mt:WebsiteURL>about/index.html">About</a></li>
-        <li><a href="<mt:WebsiteURL>contact/index.html">Contact</a></li>
-        <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
-        <mt:If name="entrycount" gt="0">
-          <li><a href="<mt:BlogRelativeURL>news.html">News</a></li>
-        </mt:If>
+        <li><a href="<mt:WebsiteURL>#sitetop">ホーム</a></li>
+        <li><a href="<mt:WebsiteURL>lemongrass-tea/index.html">レモングラス・ティー</a></li>
+        <li><a href="<mt:WebsiteURL>cafe/index.html">カフェ</a></li>
+        <li><a href="<mt:WebsiteURL>about/index.html">会社情報</a></li>
+        <li><a href="<mt:WebsiteURL>contact/index.html">お問い合わせ</a></li>
+        <li><a href="<mt:WebsiteURL>news.html">お知らせ</a></li>
+        <li><a href="<mt:WebsiteURL>column/index.html">コラム</a></li>
         <li class="navbar-social-links">
           <ul class="list-inline">
             <li class="facebook"><a href="https://www.facebook.com/cafe.makrood/" target="_blank"><span class="fa fa-facebook"></span></a></li>
