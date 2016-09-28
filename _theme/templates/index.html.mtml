@@ -63,14 +63,14 @@
       </mt:If>
     </section>
   </mt:Pages>
-  <mt:SetVarBlock name="entrycount"><mt:EntriesCount></mt:SetVarBlock>
+  <mt:SetVarBlock name="entrycount"><mt:MTBlogEntryCount include_blogs="column"></mt:SetVarBlock>
   <mt:If name="entrycount" gt="0">
-    <section id="top-news" class="webpages">
+    <section id="top-column" class="webpages">
       <div class="container">
-        <h2 class="webpages-title">お知らせ</h2>
-        <p class="webpages-subtitle">News</p>
+        <h2 class="webpages-title">コラム 〜小さな畑から〜</h2>
+        <p class="webpages-subtitle">Column</p>
         <div class="row">
-          <mt:Entries lastn="4">
+          <mt:Entries include_blogs="column" lastn="4">
             <div class="col-sm-3">
               <a href="<mt:EntryPermalink>">
                 <mt:If tag="CustomFieldValue" identifier="entry_main_image">
@@ -83,13 +83,27 @@
                   </mt:EntryAssets>
                 </mt:If>
                 <div class="entry-detail">
-                  <h3 class="top-news-title"><mt:EntryTitle encode_html="1"></h3>
+                  <h3 class="top-column-title"><mt:EntryTitle encode_html="1"></h3>
                   <p class="entry-excerpt"><mt:EntryExcerpt></p>
                 </div>
               </a>
             </div>
           </mt:Entries>
         </div>
+      </div>
+    </section>
+  </mt:If>
+  <mt:If name="entrycount" gt="0">
+    <section id="top-news" class="webpages">
+      <div class="container">
+        <h2 class="webpages-title">お知らせ</h2>
+        <p class="webpages-subtitle">News</p>
+        <ul class="top-news-list">
+          <mt:Entries lastn="4">
+            <li><a href="<mt:EntryPermalink>"><time class="top-news-list-time"><mt:EntryDate></time><mt:EntryTitle encode_html="1"></a></li>
+          </mt:Entries>
+        </ul>
+        <div class="webpages-more"><a class="btn btn-info btn-lg" href="#" role="button">お知らせ一覧へ</a></div>
       </div>
     </section>
   </mt:If>
