@@ -1,26 +1,24 @@
 <mt:Entries paginate_by="$paginate">
-  <article class="entry clearfix">
-    <mt:If tag="CustomFieldValue" identifier="entry_main_image">
-      <mt:CustomFieldAsset identifier="entry_main_image">
-        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240" square="1">" alt="<mt:AssetLabel>"></figure>
-      </mt:CustomFieldAsset>
-    <mt:Else>
-      <mt:EntryAssets type="image" sort_order="ascend" limit="1">
-        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240" square="1">" alt="<mt:AssetLabel>"></figure>
-      </mt:EntryAssets>
-    </mt:If>
-    <div class="entry-meta">
-      <time datetime="<mt:EntryDate format="%Y-%m-%d">"><span class="year"><mt:EntryDate format="%Y">年</span><span class="monthday"><mt:EntryDate format="%b月%e日"></span></time>
-      <mt:EntryCategories><a href="<mt:CategoryArchiveLink>" class="category"><mt:CategoryLabel encode_html="1"></a></mt:EntryCategories>
-    </div>
-    <h2 class="entry-title"><a href="<mt:EntryPermalink>"><mt:EntryTitle encode_html="1"></a></h2>
-    <div class="entry-excerpt">
-      <mt:EntryExcerpt>
-    </div>
-    <div class="pagemore">
-      <a href="<mt:EntryPermalink>" class="btn btn-primary btn-sm"><i class="fa fa-angle-double-right"></i>&nbsp;続きを見る</a>
-    </div>
-  </article>
+  <mt:EntriesHeader>
+    <div class="row">
+  </mt:EntriesHeader>
+  <div class="col-sm-4">
+    <a href="<mt:EntryPermalink>">
+      <mt:If tag="CustomFieldValue" identifier="entry_main_image">
+         <figure><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="320" square="1"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
+      <mt:Else>
+        <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+          <figure><img src="<mt:AssetThumbnailURL height="320" square="1">" width="320" height="320" alt="<mt:EntryTitle>"></figure>
+        <mt:Else>
+          <figure><img src="<mt:WebsiteURL>images/no-image.png" width="320" height="320" alt="NO IMAGE"></figure>
+        </mt:EntryAssets>
+      </mt:If>
+      <div class="entry-detail">
+        <h3 class="top-column-title"><mt:EntryTitle encode_html="1"></h3>
+        <p class="entry-excerpt"><mt:EntryExcerpt></p>
+      </div>
+    </a>
+  </div>
   <mt:EntriesFooter>
     <nav class="page-navigation">
       <ul class="page-navigation-list">
