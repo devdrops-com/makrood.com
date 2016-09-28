@@ -1,0 +1,63 @@
+<!DOCTYPE html><mt:Include module="config">
+<html lang="<mt:BlogLanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:PublishCharset>">
+<title><mt:PageTitle encode_html="1"> | <mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:PageExcerpt>">
+<meta name="keywords" content="<mt:PageKeywords>">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<mt:BlogURL encode_html="1">images/favicon.ico">
+<link rel="apple-touch-icon" href="<mt:WebsiteURL>images/apple-touch-icon.png">
+<link rel="start" href="<mt:BlogURL encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogURL encode_html="1">atom.xml">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<mt:BlogLanguage setvar="blog_lang"><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><mt:Var name="blog_lang"></mt:If>">
+<meta property="og:title" content="<mt:PageTitle encode_html="1"> | <mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:PagePermalink encode_html="1">">
+<meta property="og:description" content="<mt:PageExcerpt>">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:If tag="CustomFieldValue" identifier="page_main_image"><mt:CustomFieldAsset identifier="page_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:PageAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.png</mt:PageAssets></mt:If>">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:PageExcerpt>">
+<link itemprop="url" href="<mt:PagePermalink encode_html="1">">
+<link itemprop="image" href="<mt:If tag="CustomFieldValue" identifier="page_main_image"><mt:CustomFieldAsset identifier="page_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:PageAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.png</mt:PageAssets></mt:If>">
+<mt:Include module="common_stylesheet">
+<mt:Include module="common_head_js">
+</head>
+<body id="sitetop">
+  <mt:Include module="header">
+  <div class="mainvisual-lower"<mt:If tag="CustomFieldValue" identifier="page_main_image"> style="background-image: url('<mt:CustomFieldAsset identifier="page_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset>')"</mt:If>>
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="<mt:WebsiteURL>">Home</a></li>
+        <mt:SetVarBlock name="page_base_name"><mt:PageBaseName></mt:SetVarBlock>
+        <mt:SetVar name="exclude_current" value="0">
+        <mt:If name="page_base_name" eq="index">
+          <mt:SetVar name="exclude_current" value="1">
+        </mt:If>
+        <mt:ParentFolders exclude_current="$exclude_current">
+          <li><a href="<mt:BlogURL><mt:FolderPath>/" title="<mt:FolderLabel>"><mt:FolderLabel></a></li>
+        </mt:ParentFolders>
+        <li class="active"><mt:PageTitle></li>
+      </ol>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container page">
+      <article>
+        <h2 class="content-title"><mt:PageTitle></h2>
+        <p class="content-subtitle"><mt:PageBasename></p>
+        <div class="page-body">
+          <mt:PageBody>
+          <mt:PageMore>
+        </div>
+      </article>
+    </div>
+  </div>
+  <mt:Include module="footer">
+  <mt:Include module="common_bottom_js">
+</body>
+</html>

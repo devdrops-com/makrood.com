@@ -1,0 +1,36 @@
+<mt:Entries paginate_by="$paginate">
+  <article class="entry clearfix">
+    <mt:If tag="CustomFieldValue" identifier="entry_main_image">
+      <mt:CustomFieldAsset identifier="entry_main_image">
+        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></figure>
+      </mt:CustomFieldAsset>
+    <mt:Else>
+      <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+        <figure class="entry-main-image"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></figure>
+      </mt:EntryAssets>
+    </mt:If>
+    <div class="entry-meta">
+      <time datetime="<mt:EntryDate format="%Y-%m-%d">"><span class="year"><mt:EntryDate format="%Y">年</span><span class="monthday"><mt:EntryDate format="%b月%e日"></span></time>
+      <mt:EntryCategories><a href="<mt:CategoryArchiveLink>" class="category"><mt:CategoryLabel encode_html="1"></a></mt:EntryCategories>
+    </div>
+    <h2 class="entry-title"><a href="<mt:EntryPermalink>"><mt:EntryTitle encode_html="1"></a></h2>
+    <div class="entry-excerpt">
+      <mt:EntryExcerpt>
+    </div>
+    <div class="pagemore">
+      <a href="<mt:EntryPermalink>" class="btn btn-primary btn-sm"><i class="fa fa-angle-double-right"></i>&nbsp;続きを見る</a>
+    </div>
+  </article>
+  <mt:EntriesFooter>
+    <nav class="page-navigation">
+      <ul class="page-navigation-list">
+        <mt:PaginationHasPrevious>
+        <li class="page-navigation-list-item page-navigation-prev"><a href="<mt:PaginationPreviousURL>" rel="prev">前の<mt:GetVar name="paginate">件</a></li>
+        </mt:PaginationHasPrevious>
+        <mt:PaginationHasNext>
+        <li class="page-navigation-list-item page-navigation-next"><a href="<mt:PaginationNextURL>" rel="next">次の<mt:GetVar name="paginate">件</a></li>
+        </mt:PaginationHasNext>
+      </ul>
+    </nav>
+  </mt:EntriesFooter>
+</mt:Entries>

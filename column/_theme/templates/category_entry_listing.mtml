@@ -1,0 +1,62 @@
+<!DOCTYPE html><mt:Include module="config">
+<html lang="<mt:BlogLanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:PublishCharset>">
+<title><mt:CategoryLabel encode_html="1"> | ニュース | <mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:BlogName encode_html="1">のニュース。<mt:CategoryLabel encode_html="1">カテゴリのアーカイブページです。">
+<meta name="keywords" content="<mt:CustomFieldValue identifier="blog_keyword">,ニュース,<mt:CategoryLabel encode_html="1">">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<mt:BlogURL encode_html="1">images/favicon.ico">
+<link rel="apple-touch-icon" href="<mt:WebsiteURL>images/apple-touch-icon.png">
+<link rel="start" href="<mt:BlogURL encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:BlogURL encode_html="1">atom.xml">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<mt:BlogLanguage setvar="blog_lang"><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><mt:Var name="blog_lang"></mt:If>">
+<meta property="og:title" content="<mt:CategoryLabel encode_html="1"> | ニュース | <mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:CategoryArchiveLink encode_html="1">">
+<meta property="og:description" content="<mt:BlogName encode_html="1">のニュース。<mt:CategoryLabel encode_html="1">カテゴリのアーカイブページです。">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:BlogURL encode_html="1">images/ogimage.png">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:BlogName encode_html="1">のニュース。<mt:CategoryLabel encode_html="1">カテゴリのアーカイブページです。">
+<link itemprop="url" href="<mt:CategoryArchiveLink encode_html="1">">
+<link itemprop="image" href="<mt:BlogURL encode_html="1">images/ogimage.png">
+<mt:Include module="common_stylesheet">
+<mt:Include module="common_head_js">
+</head>
+<body id="sitetop">
+  <mt:Include module="header">
+  <section class="mainvisual-lower">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="<mt:WebsiteURL>">Home</a></li>
+        <mt:ParentCategories exclude_current="1">
+          <li><a href="<mt:CategoryArchiveLink>" title="<mt:CategoryLabel>"><mt:CategoryLabel></a></li>
+        </mt:ParentCategories>
+        <li class="active"><mt:CategoryLabel></li>
+      </ol>
+    </div>
+  </section>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1 class="content-title"><mt:CategoryLabel encode_html="1"></h1>
+          <div class="entry-list">
+            <mt:Include module="entry-list">
+          </div>
+          <div class="holder"></div>
+        </div><!-- /primary-content -->
+        <aside class="col-sm-3 sidebar">
+          <mt:Include module="blog-sidemenu">
+        </aside><!-- sidebar -->
+      </div>
+    </div>
+  </div>
+  <mt:Include module="footer">
+  <mt:Include module="common_bottom_js">
+</body>
+</html>
