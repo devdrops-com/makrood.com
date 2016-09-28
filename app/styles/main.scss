@@ -1315,14 +1315,14 @@ img {
     overflow: hidden;
     height: 150px;
 
-    &.noimage {
-      height: 150px;
-      background: $gray-light;
-      color: $white;
-      text-align: center;
-      font-size: 30px;
-      line-height: 150px;
-    }
+    // &.noimage {
+    //   height: 150px;
+    //   background: $gray-light;
+    //   color: $white;
+    //   text-align: center;
+    //   font-size: 30px;
+    //   line-height: 150px;
+    // }
 
     img {
       width: 100%;
