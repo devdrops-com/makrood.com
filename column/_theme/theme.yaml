@@ -121,9 +121,9 @@ elements:
           config:
             filename: config.mtml
             label: config
-          entry-list:
-            filename: entry-list.mtml
-            label: entry-list
+          column-list:
+            filename: column-list.mtml
+            label: column-list
           footer:
             filename: footer.mtml
             label: footer
