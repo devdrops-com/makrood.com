@@ -38,10 +38,12 @@
     }
   });
   // ニュースのサムネイルの高さを揃える
-  if ($(window).width() >= 768) {
-    $('#top-column [class^="col-"]').tile(4);
-    $('.column-list [class^="col-"]').tile(3);
-  }
+  $(window).load(function() {
+    if ($(window).width() >= 768) {
+      $('#top-column [class^="col-"]').tile(4);
+      $('.column-list [class^="col-"]').tile(3);
+    }
+  });
   // Google Map
   function initMap() {
     var latlng = new google.maps.LatLng(31.571655, 130.551444);
