@@ -955,7 +955,6 @@ img {
 
   &.sticky {
     background-color: rgba($white, 1);
-
     @include box-shadow(0 0px 3px 0 rgba(0,0,0,0.5));
     @media(min-width: $screen-md-min) {
       .navbar-brand {
@@ -987,12 +986,10 @@ img {
       height: auto;
       font-size: 0;
       line-height: 0;
-
       @include transition(padding 0.3s ease-in-out);
 
       img {
         height: 70px;
-
         @include transition(height 0.3s ease-in-out);
       }
     }
@@ -1012,7 +1009,6 @@ img {
     }
     @media(min-width: $screen-md-min) {
       margin-top: 35px;
-
       @include transition(margin-top 0.3s ease-in-out);
 
       > li {
@@ -1302,7 +1298,6 @@ img {
           right: 1em;
           content: "\f054";
           font-family: FontAwesome;
-
           @include transition(right 0.5s ease-in-out);
         }
 
@@ -1522,7 +1517,6 @@ img {
   .column-list {
     .entry-main-image img {
       -webkit-filter: brightness(80%);
-
       @include transition(all 0.5s ease-in-out);
 
       &:hover {

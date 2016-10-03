@@ -39,8 +39,8 @@
   });
   // ニュースのサムネイルの高さを揃える
   if ($(window).width() >= 768) {
-    $('#top-column [class^="col-"] > a').tile(4);
-    $('#column-list [class^="col-"] > a').tile(3);
+    $('#top-column [class^="col-"]').tile(4);
+    $('.column-list [class^="col-"]').tile(3);
   }
   // Google Map
   function initMap() {

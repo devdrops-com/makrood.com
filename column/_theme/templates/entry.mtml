@@ -3,7 +3,7 @@
 <head>
 <meta charset="<mt:PublishCharset>">
 <title><mt:EntryTitle encode_html="1"> | <mt:BlogName encode_html="1"></title>
-<meta name="description" content="<mt:EntryExcerpt>">
+<meta name="description" content="<mt:EntryExcerpt strip_linefeeds="1">">
 <meta name="keywords" content="<mt:EntryKeywords>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,11 +17,11 @@
 <meta property="og:locale" content="<mt:BlogLanguage setvar="blog_lang"><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><mt:Var name="blog_lang"></mt:If>">
 <meta property="og:title" content="<mt:EntryTitle encode_html="1"> | <mt:BlogName encode_html="1">">
 <meta property="og:url" content="<mt:EntryPermalink encode_html="1">">
-<meta property="og:description" content="<mt:EntryExcerpt>">
+<meta property="og:description" content="<mt:EntryExcerpt strip_linefeeds="1">">
 <meta property="og:site_name" content="<mt:BlogName encode_html="1">">
 <meta property="og:image" content="<mt:If tag="CustomFieldValue" identifier="entry_main_image"><mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:EntryAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.png</mt:EntryAssets></mt:If>">
 <!-- Microdata -->
-<meta itemprop="description" content="<mt:EntryExcerpt>">
+<meta itemprop="description" content="<mt:EntryExcerpt strip_linefeeds="1">">
 <link itemprop="url" href="<mt:EntryPermalink encode_html="1">">
 <link itemprop="image" href="<mt:If tag="CustomFieldValue" identifier="entry_main_image"><mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:EntryAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.png</mt:EntryAssets></mt:If>">
 <mt:Include module="common_stylesheet">
