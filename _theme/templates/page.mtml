@@ -53,6 +53,32 @@
         <div class="page-body">
           <mt:PageBody>
           <mt:PageMore>
+          <mt:TopLevelFolder><mt:FolderID setvar="folder_id"></mt:TopLevelFolder>
+          <mt:If name="folder_id" eq="19213">
+            <h2>美味しいレモングラス・ティーの飲み方</h2>
+            <div class="row">
+              <mt:Entries lastn="3" category="美味しいレモングラス・ティーの飲み方" include_blogs="column">
+                <div class="col-sm-4">
+                  <a href="<mt:EntryPermalink>">
+                    <mt:If tag="CustomFieldValue" identifier="entry_main_image">
+                       <figure><img src="<mt:CustomFieldAsset identifier="entry_main_image"><mt:AssetThumbnailURL width="320" square="1"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
+                    <mt:Else>
+                      <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+                        <figure><img src="<mt:AssetThumbnailURL height="320" square="1">" width="320" height="320" alt="<mt:EntryTitle>"></figure>
+                      <mt:Else>
+                        <figure><img src="<mt:WebsiteURL>images/no-image.png" width="320" height="320" alt="NO IMAGE"></figure>
+                      </mt:EntryAssets>
+                    </mt:If>
+                    <div class="entry-detail">
+                      <h3 class="top-column-title"><mt:EntryTitle encode_html="1"></h3>
+                      <p class="entry-excerpt"><mt:EntryExcerpt strip_linefeeds="1"></p>
+                    </div>
+                  </a>
+                </div>
+              </mt:Entries>
+            </div>
+            <div class="text-center"><a class="btn btn-info btn-lg" href="<mt:WebsiteURL>column/howtodrink/" role="button">コラム一覧へ</a></div>
+          </mt:If>
         </div>
       </article>
     </div>
