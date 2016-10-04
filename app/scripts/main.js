@@ -38,51 +38,51 @@
     }
   });
   // ニュースのサムネイルの高さを揃える
-  $(window).load(function() {
+  $(window).on('load',function(){
     if ($(window).width() >= 768) {
       $('#top-column [class^="col-"]').tile(4);
       $('.column-list [class^="col-"]').tile(3);
     }
   });
-  // Google Map
-  function initMap() {
-    var latlng = new google.maps.LatLng(31.571655, 130.551444);
-    var myOptions = {
-      zoom: 18,
-      center: latlng,
-      scrollwheel: false,
-      draggable: false,
-      mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'MY_GOOGLEMAP']
-      }
-    };
-    var map = new google.maps.Map(document.getElementById('access-map'), myOptions);
-    var icon = new google.maps.MarkerImage('../images/map-icon.png', new google.maps.Size(80, 85), new google.maps.Point(0, 0));
-    var markerOptions = {
-      position: latlng,
-      map: map,
-      icon: icon,
-      title: 'Herbal Shop Makrood'
-    };
-    var marker = new google.maps.Marker(markerOptions);
-    // スタイル
-    var styleOptions = [
-      {
-        'stylers': [
-          {
-            'hue': '#e6e400'
-          }, {
-            'visibility': 'simplified'
-          }
-        ]
-      }
-    ];
-    var styledMapOptions = {
-      name: 'Herbal Shop Makrood'
-    }
-    var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
-    map.mapTypes.set('MY_GOOGLEMAP', sampleType);
-    map.setMapTypeId('MY_GOOGLEMAP');
-  }
-  google.maps.event.addDomListener(window, 'load', initMap);
+  // // Google Map
+  // function initMap() {
+  //   var latlng = new google.maps.LatLng(31.571655, 130.551444);
+  //   var myOptions = {
+  //     zoom: 18,
+  //     center: latlng,
+  //     scrollwheel: false,
+  //     draggable: false,
+  //     mapTypeControlOptions: {
+  //       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'MY_GOOGLEMAP']
+  //     }
+  //   };
+  //   var map = new google.maps.Map(document.getElementById('access-map'), myOptions);
+  //   var icon = new google.maps.MarkerImage('../images/map-icon.png', new google.maps.Size(80, 85), new google.maps.Point(0, 0));
+  //   var markerOptions = {
+  //     position: latlng,
+  //     map: map,
+  //     icon: icon,
+  //     title: 'Herbal Shop Makrood'
+  //   };
+  //   var marker = new google.maps.Marker(markerOptions);
+  //   // スタイル
+  //   var styleOptions = [
+  //     {
+  //       'stylers': [
+  //         {
+  //           'hue': '#e6e400'
+  //         }, {
+  //           'visibility': 'simplified'
+  //         }
+  //       ]
+  //     }
+  //   ];
+  //   var styledMapOptions = {
+  //     name: 'Herbal Shop Makrood'
+  //   }
+  //   var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+  //   map.mapTypes.set('MY_GOOGLEMAP', sampleType);
+  //   map.setMapTypeId('MY_GOOGLEMAP');
+  // }
+  // google.maps.event.addDomListener(window, 'load', initMap);
 })();
